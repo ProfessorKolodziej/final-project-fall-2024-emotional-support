@@ -5,20 +5,65 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Update your description here" />
-	<title>Update your title here</title>
+	<meta name="description" content="Emotional Support" />
+	<title>Emotional Support</title>
 	<!--
 		This is where you should link your CSS file.
 	-->
+	<link rel="stylesheet" href="css/style.css">
+		<body>
+		<main class="content-container">
+			<h1>Emotional Support</h1>
+			<p>How are you feeling today?</p>
+		</main>
+
 </head>
 
-<body>
-	<main class="content-container">
-		<h1>Welcome to your final project!</h1>
-	</main>
 	<!--
 		This is where you should link your JS file.
 	-->
-</body>
+	<script src="scripts.js"></script>
+	<div class="mood-options">
+		<button class="mood-btn" onclick="showMessage('happy')">😊 Happy</button>
+		<button class="mood-btn" onclick="showMessage('sad')">😢 Sad</button>
+		<button class="mood-btn" onclick="showMessage('angry')">😡 Angry</button>
+		<button class="mood-btn" onclick="showMessage('anxious')">😟 Anxious</button>
+		<button class="mood-btn" onclick="showMessage('fear')">😨 Fear</button>
 
+
+	</div>
+	
+</head>
+<body>
+    <header>
+        <h2>Happy</h2>
+        <p>Inspired by Benson Boone</p>
+    </header>
+
+    <section class="quotes">
+        <h2>Inspirational Quotes</h2>
+        <blockquote>"Whoever is happy will make others happy." <br>— Anne Frank</blockquote>
+        <blockquote>"Be the change that you wish to see in the world." <br>— Mahatma Gandhi</blockquote>
+        <blockquote>"There is no way to happiness – happiness is the way." <br>— Thich Nhat Hanh</blockquote>
+    </section>
+
+    <section class="music">
+        <h2>Uplifting Music</h2>
+        <button onclick="playMusic()">🎵 Play Music</button>
+    </section>
+
+    <section class="images">
+        <h2>Inspiring Images</h2>
+        
+    </section>
+
+    <section class="affirmations">
+        <h2>Daily Affirmations</h2>
+        <p id="affirmation">Click below for a positive message!</p>
+        <button onclick="newAffirmation()">💡 New Affirmation</button>
+        <button onclick="saveAffirmation()">Like</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
 </html>

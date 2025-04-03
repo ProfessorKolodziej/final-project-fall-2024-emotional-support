@@ -1,7 +1,5 @@
-// This is where you should write all JavaScript
-// for your project. Remember a few things as you start!
-// - Use let or const for all variables
-// - Do not use jQuery - use JavaScript instead
-// - Do not use onclick - use addEventListener instead
-// - Run npm run test regularly to check autograding
-// - You'll need to link this file to your HTML :)
+<button class="mood-btn" onclick="showMessage('happy')">😊 Happy</button>
+		<button class="mood-btn" onclick="showMessage('sad')">😢 Sad</button>
+		<button class="mood-btn" onclick="showMessage('angry')">😡 Angry</button>
+		<button class="mood-btn" onclick="showMessage('anxious')">😟 Anxious</button>
+		<button class="mood-btn" onclick="showMessage('fear')">😨 Fear</button>
