@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful things - 音乐播放</title>
+    <link rel="stylesheet" href="css/desktop_music_player.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left-header">
+            <div class="app-title">Emotional Support</div>
+            <div class="top-navigation">
+                <a href="desktop.html" class="nav-link">Index</a>
+                <a href="#" class="nav-link">About</a>
+            </div>
+        </div>
+        <div class="profile-icon">
+            <i class="fas fa-user"></i>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="player-content">
+            <div class="album-section">
+                <div class="album-art">
+                    <img src="./images/music.png" alt="Beautiful things album art">
+                </div>
+                
+                <div class="next-up">
+                    <div class="next-label">Up Next</div>
+                    <div class="next-song">
+                        <div class="next-image">
+                            <img src="./images/musicimg.png" alt="Marry you">
+                        </div>
+                        <div class="next-details">
+                            <div class="next-title">Marry you</div>
+                            <div class="next-artist">Benson Boone</div>
+                        </div>
+                        <div class="more-options">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="details-section">
+                <div class="song-title">Beautiful things</div>
+                <div class="artist-name">Benson Boone</div>
+                
+                <div class="player-actions">
+                    <div class="action-button shuffle">
+                        <i class="fas fa-random"></i>
+                    </div>
+                    <div class="action-button repeat">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <div class="action-button favorite">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="action-button share">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="time-info">
+                        <div class="current-time">1:15</div>
+                        <div class="total-time">3:45</div>
+                    </div>
+                </div>
+                
+                <div class="controls-row">
+                    <div class="control-button previous">
+                        <i class="fas fa-step-backward"></i>
+                    </div>
+                    <div class="play-button">
+                        <i class="fas fa-pause"></i>
+                    </div>
+                    <div class="control-button next">
+                        <i class="fas fa-step-forward"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 添加自动重定向代码，根据屏幕宽度判断是否应该跳转到移动版
+        window.onload = function() {
+            if (window.innerWidth < 1024) {
+                window.location.href = 'music_player.html';
+            }
+        };
+        
+        // 当窗口大小改变时也进行检查
+        window.onresize = function() {
+            if (window.innerWidth < 1024) {
+                window.location.href = 'music_player.html';
+            }
+        };
+    </script>
+</body>
+</html> 

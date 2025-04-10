@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.header {
+    background-color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.app-title {
+    color: #8cb3d9;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #e6e6e6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-icon i {
+    color: #666;
+    font-size: 20px;
+}
+
+.main-card {
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.main-question {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.quote {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.day-check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.day {
+    color: #8cb3d9;
+    font-size: 18px;
+}
+
+.check-btn {
+    background-color: #8cb3d9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.mood-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 20px;
+}
+
+.mood-card {
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+}
+
+.mood-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.mood-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.mood-subtitle {
+    color: #666;
+}
+
+.happy {
+    background-color: #ffffcc;
+}
+
+.happy .mood-icon {
+    background-color: #ffcc00;
+    color: white;
+}
+
+.sad {
+    background-color: #e6e6ff;
+}
+
+.sad .mood-icon {
+    background-color: #6666ff;
+    color: white;
+}
+
+.angry {
+    background-color: #ffe6e6;
+}
+
+.angry .mood-icon {
+    background-color: #ff6666;
+    color: white;
+}
+
+.anxious {
+    background-color: #ffe6ff;
+}
+
+.anxious .mood-icon {
+    background-color: #cc66ff;
+    color: white;
+}
+
+.fear {
+    background-color: #e6ffe6;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+}
+
+.fear .mood-icon {
+    background-color: #66cc66;
+    color: white;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #666;
+}
+
+.nav-item i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.home-icon {
+    color: #ffb3b3;
+} 

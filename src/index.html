@@ -1,69 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Emotional Support" />
-	<title>Emotional Support</title>
-	<!--
-		This is where you should link your CSS file.
-	-->
-	<link rel="stylesheet" href="css/style.css">
-		<body>
-		<main class="content-container">
-			<h1>Emotional Support</h1>
-			<p>How are you feeling today?</p>
-		</main>
-
-</head>
-
-	<!--
-		This is where you should link your JS file.
-	-->
-	<script src="scripts.js"></script>
-	<div class="mood-options">
-		<button class="mood-btn" onclick="showMessage('happy')">😊 Happy</button>
-		<button class="mood-btn" onclick="showMessage('sad')">😢 Sad</button>
-		<button class="mood-btn" onclick="showMessage('angry')">😡 Angry</button>
-		<button class="mood-btn" onclick="showMessage('anxious')">😟 Anxious</button>
-		<button class="mood-btn" onclick="showMessage('fear')">😨 Fear</button>
-
-
-	</div>
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情绪支持应用</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h2>Happy</h2>
-        <p>Inspired by Benson Boone</p>
-    </header>
-
-    <section class="quotes">
-        <h2>Inspirational Quotes</h2>
-        <blockquote>"Whoever is happy will make others happy." <br>— Anne Frank</blockquote>
-        <blockquote>"Be the change that you wish to see in the world." <br>— Mahatma Gandhi</blockquote>
-        <blockquote>"There is no way to happiness – happiness is the way." <br>— Thich Nhat Hanh</blockquote>
-    </section>
-
-    <section class="music">
-        <h2>Uplifting Music</h2>
-        <button onclick="playMusic()">🎵 Play Music</button>
-    </section>
-
-    <section class="images">
-        <h2>Inspiring Images</h2>
+    <div class="header">
+        <div class="app-title">Emotional Support</div>
+        <div class="profile-icon">
+            <i class="fas fa-user"></i>
+        </div>
+    </div>
+    
+    <div class="main-card">
+        <div class="main-question">How are you feeling today?</div>
+        <div class="quote">"The only way to do great work is to love what you do"</div>
+        <div class="day-check">
+            <div class="day">Day 7</div>
+            <button class="check-btn">Check In</button>
+        </div>
+    </div>
+    
+    <div class="mood-grid">
+        <a href="happy.html" style="text-decoration: none; color: inherit;">
+            <div class="mood-card happy">
+                <div class="mood-icon">
+                    <i class="fas fa-smile"></i>
+                </div>
+                <div class="mood-title">Happy</div>
+                <div class="mood-subtitle">Embrace joy</div>
+            </div>
+        </a>
         
-    </section>
-
-    <section class="affirmations">
-        <h2>Daily Affirmations</h2>
-        <p id="affirmation">Click below for a positive message!</p>
-        <button onclick="newAffirmation()">💡 New Affirmation</button>
-        <button onclick="saveAffirmation()">Like</button>
-    </section>
-
-    <script src="script.js"></script>
+        <div class="mood-card sad">
+            <div class="mood-icon">
+                <i class="fas fa-sad-tear"></i>
+            </div>
+            <div class="mood-title">Sad</div>
+            <div class="mood-subtitle">Find comfort</div>
+        </div>
+        
+        <div class="mood-card angry">
+            <div class="mood-icon">
+                <i class="fas fa-angry"></i>
+            </div>
+            <div class="mood-title">Angry</div>
+            <div class="mood-subtitle">Release tension</div>
+        </div>
+        
+        <div class="mood-card anxious">
+            <div class="mood-icon">
+                <i class="fas fa-brain"></i>
+            </div>
+            <div class="mood-title">Anxious</div>
+            <div class="mood-subtitle">Find peace</div>
+        </div>
+    </div>
+    
+    <div class="fear">
+        <div class="mood-icon">
+            <i class="fas fa-ghost"></i>
+        </div>
+        <div class="mood-title">Fear</div>
+        <div class="mood-subtitle">Build courage</div>
+    </div>
+    
+    <div class="navbar">
+        <div class="nav-item">
+            <i class="fas fa-home home-icon"></i>
+            <div>Home</div>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-cog"></i>
+            <div>Settings</div>
+        </div>
+    </div>
 </body>
+<script>
+    // 添加自动重定向代码，根据屏幕宽度判断是否应该跳转到PC版
+    window.onload = function() {
+        if (window.innerWidth >= 1024) {
+            window.location.href = 'desktop.html';
+        }
+    };
+    
+    // 当窗口大小改变时也进行检查
+    window.onresize = function() {
+        if (window.innerWidth >= 1024) {
+            window.location.href = 'desktop.html';
+        }
+    };
+</script>
 </html>

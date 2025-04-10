@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy - 情绪支持应用</title>
+    <link rel="stylesheet" href="css/desktop_happy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left-header">
+            <div class="app-title">Emotional Support</div>
+            <div class="top-navigation">
+                <a href="desktop.html" class="nav-link">Index</a>
+                <a href="#" class="nav-link">About</a>
+            </div>
+        </div>
+        <div class="profile-icon">
+            <i class="fas fa-user"></i>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1 class="page-title">Happy</h1>
+        
+        <div class="content-row">
+            <div class="content-column">
+                <div class="section">
+                    <div class="section-header">
+                        <div class="section-title">Uplifting Music</div>
+                        <button class="more-button">More</button>
+                    </div>
+                    
+                    <div class="music-list">
+                        <div class="music-item" onclick="window.location.href='desktop_music_player.html';">
+                            <div class="music-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="music-details">
+                                <div class="music-title">Beautiful things</div>
+                                <div class="music-artist">Benson Boone</div>
+                            </div>
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="music-item">
+                            <div class="music-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="music-details">
+                                <div class="music-title">Beautiful things</div>
+                                <div class="music-artist">Benson Boone</div>
+                            </div>
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="music-item">
+                            <div class="music-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="music-details">
+                                <div class="music-title">Beautiful things</div>
+                                <div class="music-artist">Benson Boone</div>
+                            </div>
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-column">
+                <div class="section">
+                    <div class="section-header">
+                        <div class="section-title">Inspiring Images</div>
+                        <button class="more-button">More</button>
+                    </div>
+                    
+                    <div class="image-slider">
+                        <div class="image-item">
+                            <img src="./images/img1.png" alt="Teddy bear on road trip">
+                        </div>
+                        <div class="image-item">
+                            <img src="./images/img2.png" alt="Teddy bear on road trip">
+                        </div>
+                    </div>
+                    
+                    <div class="image-navigation">
+                        <button class="prev-button">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="next-button">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">Daily Affirmations</div>
+            </div>
+            
+            <div class="quotes-row">
+                <div class="quote-card">
+                    <button class="heart-button">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <div class="quote-text">"Whoever is happy will make others happy."</div>
+                    <div class="quote-author">- Anne Frank, The Diary of a Young Girl</div>
+                </div>
+                
+                <div class="quote-card">
+                    <button class="heart-button">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <div class="quote-text">"Whoever is happy will make others happy."</div>
+                    <div class="quote-author">- Anne Frank, The Diary of a Young Girl</div>
+                </div>
+                
+                <div class="quote-card">
+                    <button class="heart-button">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <div class="quote-text">"Whoever is happy will make others happy."</div>
+                    <div class="quote-author">- Anne Frank, The Diary of a Young Girl</div>
+                </div>
+            </div>
+            
+            <div class="more-quotes">
+                <button class="more-button">More</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 添加自动重定向代码，根据屏幕宽度判断是否应该跳转到移动版
+        window.onload = function() {
+            if (window.innerWidth < 1024) {
+                window.location.href = 'happy.html';
+            }
+        };
+        
+        // 当窗口大小改变时也进行检查
+        window.onresize = function() {
+            if (window.innerWidth < 1024) {
+                window.location.href = 'happy.html';
+            }
+        };
+    </script>
+</body>
+</html> 
