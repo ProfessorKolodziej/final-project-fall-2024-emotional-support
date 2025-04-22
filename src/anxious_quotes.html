@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calming Quotes - 情绪支持应用</title>
+    <link rel="stylesheet" href="css/anxious_quotes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div style="display: flex; align-items: center;">
+            <a href="anxious.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <div class="page-title">Calming Quotes</div>
+        </div>
+        <div class="more-options">
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+    </div>
+    
+    <div class="quotes-container">
+        <div class="quote-card">
+            <div class="quote-content">
+                <div class="quote-text">“You don’t drown by falling into water. You only drown if you stay there.” 
+                    </div>
+                <div class="quote-author">—Zig Ziglar</div>
+            </div>
+            <button class="save-button">
+                <i class="fas fa-heart"></i> Save
+            </button>
+        </div>
+        
+        <div class="quote-card">
+            <div class="quote-content">
+                <div class="quote-text">“Just when the caterpillar thought the world was ending, he turned into a butterfly.” 
+                    </div>
+                <div class="quote-author">— Proverb</div>
+            </div>
+            <button class="save-button">
+                <i class="fas fa-heart"></i> Save
+            </button>
+        </div>
+        
+        <div class="quote-card">
+            <div class="quote-content">
+                <div class="quote-text">“Happiness is not a brilliant climax to years of grim struggle and anxiety. It is a long succession of little decisions simply to be happy in the moment.” 
+                </div>
+                <div class="quote-author">—J. Donald Walters</div>
+            </div>
+            <button class="save-button">
+                <i class="fas fa-heart"></i> Save
+            </button>
+        </div>
+        
+        <div class="quote-card">
+            <div class="quote-content">
+                <div class="quote-text">“By being yourself, you put something wonderful in the world that was not there before.” 
+                </div>
+                <div class="quote-author">—Edwin Elliot</div>
+            </div>
+            <button class="save-button">
+                <i class="fas fa-heart"></i> Save
+            </button>
+        </div>
+        
+        <div class="quote-card">
+            <div class="quote-content">
+                <div class="quote-text">“Most people are about as happy as they make their minds up to be.” 
+                </div>
+                <div class="quote-author">— Abraham Lincoln</div>
+            </div>
+            <button class="save-button">
+                <i class="fas fa-heart"></i> Save
+            </button>
+        </div>
+        
+        <div class="quote-card">
+            <div class="quote-content">
+                <div class="quote-text">“Nothing diminishes anxiety faster than action.” 
+                </div>
+                <div class="quote-author">— Walter Anderson</div>
+            </div>
+            <button class="save-button">
+                <i class="fas fa-heart"></i> Save
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // 添加自动重定向代码，根据屏幕宽度判断是否应该跳转到PC版
+        window.onload = function() {
+            if (window.innerWidth >= 1024) {
+                window.location.href = 'desktop_anxious_quotes.html';
+            }
+            
+            // 为保存按钮添加点击事件
+            document.querySelectorAll('.save-button').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('far')) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                        this.style.backgroundColor = '#b66fff';
+                    } else {
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                        this.style.backgroundColor = '#c88eff';
+                    }
+                    // 保持文本颜色为白色
+                    icon.style.color = 'white';
+                    this.style.color = 'white';
+                });
+            });
+        };
+        
+        // 当窗口大小改变时也进行检查
+        window.onresize = function() {
+            if (window.innerWidth >= 1024) {
+                window.location.href = 'desktop_anxious_quotes.html';
+            }
+        };
+    </script>
+</body>
+</html> 

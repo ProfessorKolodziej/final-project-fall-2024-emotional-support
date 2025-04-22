@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffdf5;
+}
+
+.header {
+    background-color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #252525;
+}
+
+.page-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+    color: #252525;
+}
+
+.more-options {
+    font-size: 24px;
+    color: #252525;
+}
+
+.quotes-container {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quote-card {
+    background-color: #fffbe6;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quote-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quote-text {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #252525;
+}
+
+.quote-author {
+    font-size: 16px;
+    color: #777;
+}
+
+.save-button {
+    align-self: center;
+    background-color: #ffeb99;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: white;
+}
+
+.save-button i {
+    font-size: 18px;
+    color: white;
+}
+
+.save-button:hover {
+    background-color: #ffcc66;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .quotes-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+/* Prevent PC redirect styles from showing briefly */
+@media (min-width: 1024px) {
+    body {
+        display: none;
+    }
+} 

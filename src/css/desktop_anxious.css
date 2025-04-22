@@ -20,7 +20,7 @@ body {
 }
 
 .app-title {
-    color: #8cb3d9;
+    color: #c88eff;
     font-size: 28px;
     font-weight: bold;
     font-family: 'Brush Script MT', cursive;
@@ -41,7 +41,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #8cb3d9;
+    color: #c88eff;
 }
 
 .back-button {
@@ -87,7 +87,7 @@ body {
 }
 
 .section {
-    background-color: #fffdf5;
+    background-color: #fcebff;
     border-radius: 12px;
     padding: 30px;
     margin-bottom: 40px;
@@ -107,18 +107,18 @@ body {
 }
 
 .more-button {
-    background-color: #ffeb99;
+    background-color: #c88eff;
     border: none;
     border-radius: 20px;
     padding: 8px 20px;
-    color: #666;
+    color: white;
     cursor: pointer;
     transition: background-color 0.3s;
     font-size: 14px;
 }
 
 .more-button:hover {
-    background-color: #ffdf80;
+    background-color: #b66fff;
 }
 
 .music-item {
@@ -140,7 +140,7 @@ body {
 }
 
 .music-icon {
-    background-color: #ffeb99;
+    background-color: #c88eff;
     width: 40px;
     height: 40px;
     border-radius: 10px;
@@ -168,7 +168,7 @@ body {
 }
 
 .play-button {
-    background-color: #ffeb99;
+    background-color: #c88eff;
     width: 35px;
     height: 35px;
     border-radius: 10px;
@@ -181,7 +181,7 @@ body {
 }
 
 .play-button:hover {
-    background-color: #ffdf80;
+    background-color: #b66fff;
 }
 
 .image-slider {
@@ -240,11 +240,11 @@ body {
     margin-bottom: 20px;
     overflow-x: auto;
     padding: 5px 0;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
 }
 
 .quotes-row::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
+    display: none;
 }
 
 .quote-card {
@@ -276,7 +276,7 @@ body {
     right: 15px;
     background: none;
     border: none;
-    color: #ffcc00;
+    color: #c88eff;
     font-size: 20px;
     cursor: pointer;
 }

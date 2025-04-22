@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fffbe6;
+    background-color: #fcebff;
 }
 
 .header {
@@ -93,7 +93,7 @@ body {
 .progress {
     width: 30%;
     height: 100%;
-    background: linear-gradient(to right, #ffcc66, #ffeb99);
+    background: linear-gradient(to right, #c88eff, #e0bdff);
     border-radius: 10px;
 }
 
@@ -126,7 +126,7 @@ body {
 .play-button {
     width: 70px;
     height: 70px;
-    background-color: #ffeb99;
+    background-color: #c88eff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -150,7 +150,11 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    color: #666;
+    color: #c88eff;
+}
+
+.favorite i {
+    color: #c88eff;
 }
 
 .playlist-item {

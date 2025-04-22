@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fffdf5;
+    background-color: #fcebff;
 }
 
 .header {
@@ -38,7 +38,7 @@ body {
 .section {
     margin: 20px;
     padding: 20px;
-    background-color: #fffbeb;
+    background-color: #f7e3ff;
     border-radius: 15px;
 }
 
@@ -56,11 +56,11 @@ body {
 }
 
 .more-button {
-    background-color: #ffeb99;
+    background-color: #c88eff;
     border: none;
     border-radius: 20px;
     padding: 8px 15px;
-    color: #666;
+    color: white;
 }
 
 .music-item {
@@ -72,7 +72,7 @@ body {
 }
 
 .music-icon {
-    background-color: #ffeb99;
+    background-color: #c88eff;
     width: 50px;
     height: 50px;
     border-radius: 10px;
@@ -99,7 +99,7 @@ body {
 }
 
 .play-button {
-    background-color: #ffeb99;
+    background-color: #c88eff;
     width: 40px;
     height: 40px;
     border-radius: 10px;
@@ -146,7 +146,7 @@ body {
 }
 
 .save-button {
-    background-color: #ffeb99;
+    background-color: #c88eff;
     border: none;
     border-radius: 20px;
     padding: 8px 20px;

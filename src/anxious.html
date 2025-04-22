@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy - 情绪支持应用</title>
-    <link rel="stylesheet" href="css/happy.css">
+    <title>Anxious - 情绪支持应用</title>
+    <link rel="stylesheet" href="css/anxious.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
             <a href="index.html" class="back-button">
                 <i class="fas fa-arrow-left"></i>
             </a>
-            <div class="page-title">Happy</div>
+            <div class="page-title">Anxious</div>
         </div>
         <div class="more-options">
             <i class="fas fa-ellipsis-v"></i>
@@ -24,16 +24,17 @@
         <div class="section-header">
             <div class="section-title">Uplifting Music</div>
             <button class="more-button">
-                More            </button>
+                More
+            </button>
         </div>
         
-        <div class="music-item" onclick="window.location.href='music_player.html';" style="cursor: pointer;">
+        <div class="music-item" onclick="window.location.href='anxious_player.html';" style="cursor: pointer;">
             <div class="music-icon">
                 <i class="fas fa-music"></i>
             </div>
             <div class="music-details">
-                <div class="music-title">Beautiful things</div>
-                <div class="music-artist">Benson Boone</div>
+                <div class="music-title">You'd Never Know</div>
+                <div class="music-artist">BLÜ EYES</div>
             </div>
             <div class="play-button">
                 <i class="fas fa-play"></i>
@@ -45,8 +46,8 @@
                 <i class="fas fa-music"></i>
             </div>
             <div class="music-details">
-                <div class="music-title">Happy</div>
-                <div class="music-artist">Benson Boone</div>
+                <div class="music-title">Anxious Heart</div>
+                <div class="music-artist">Jeremy Camp</div>
             </div>
             <div class="play-button">
                 <i class="fas fa-play"></i>
@@ -57,16 +58,17 @@
     <div class="section">
         <div class="section-header">
             <div class="section-title">Inspiring Images</div>
-            <button class="more-button" onclick="window.location.href='happy_images.html';">
-                More            </button>
+            <button class="more-button" onclick="window.location.href='anxious_images.html';">
+                More
+            </button>
         </div>
         
         <div class="images-container">
             <div class="image-item">
-                <img src="./images/img1.png" alt="Teddy bear on road trip">
+                <img src="./images/calm/1.jpg" alt="Peaceful meadow">
             </div>
             <div class="image-item">
-                <img src="./images/img2.png" alt="Beautiful flower bouquet">
+                <img src="./images/calm/2.jpg" alt="Still lake at sunset">
             </div>
         </div>
     </div>
@@ -74,29 +76,30 @@
     <div class="section">
         <div class="section-header">
             <div class="section-title">Daily Affirmations</div>
-            <button class="more-button" onclick="window.location.href='quotes.html';">
-                More            </button>
+            <button class="more-button" onclick="window.location.href='anxious_quotes.html';">
+                More
+            </button>
         </div>
         
         <div class="affirmation">
-            <div class="quote">"Whoever is happy will make others happy."</div>
-            <div class="author">- Anne Frank, The Diary of a Young Girl</div>
+            <div class="quote">"You don't drown by falling into water. You only drown if you stay there."</div>
+            <div class="author">—Zig Ziglar</div>
             <button class="save-button">
                 <i class="fas fa-heart"></i> Save
             </button>
         </div>
         
         <div class="affirmation">
-            <div class="quote">"Be the change that you wish to see in the world."</div>
-            <div class="author">- Mahatma Gandhi</div>
+            <div class="quote">"Just when the caterpillar thought the world was ending, he turned into a butterfly."</div>
+            <div class="author">— Proverb</div>
             <button class="save-button">
                 <i class="fas fa-heart"></i> Save
             </button>
         </div>
         
         <div class="affirmation">
-            <div class="quote">"There is no way to happiness – happiness is the way."</div>
-            <div class="author">- Thich Nhat Hanh</div>
+            <div class="quote">"By being yourself, you put something wonderful in the world that was not there before."</div>
+            <div class="author">—Edwin Elliot</div>
             <button class="save-button">
                 <i class="fas fa-heart"></i> Save
             </button>
@@ -107,14 +110,14 @@
     // 添加自动重定向代码，根据屏幕宽度判断是否应该跳转到PC版
     window.onload = function() {
         if (window.innerWidth >= 1024) {
-            window.location.href = 'desktop_happy.html';
+            window.location.href = 'desktop_anxious.html';
         }
     };
     
     // 当窗口大小改变时也进行检查
     window.onresize = function() {
         if (window.innerWidth >= 1024) {
-            window.location.href = 'desktop_happy.html';
+            window.location.href = 'desktop_anxious.html';
         }
     };
 </script>

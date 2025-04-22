@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peaceful Images - 情绪支持应用 (Desktop)</title>
+    <link rel="stylesheet" href="css/desktop_anxious_images.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left-header">
+            <div class="app-title">Emotional Support</div>
+            <div class="top-navigation">
+                <a href="desktop.html" class="nav-link">Index</a>
+                <a href="desktop_anxious.html" class="nav-link">Anxious</a>
+                <a href="#" class="nav-link">About</a>
+            </div>
+        </div>
+        <div class="profile-icon">
+            <i class="fas fa-user"></i>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="content-header">
+            <h1>Peaceful Images</h1>
+            <p>A collection of calming visuals to help ease anxiety</p>
+        </div>
+        
+        
+        <div class="image-grid">
+            <div class="image-card">
+                <div class="image">
+                    <img src="./images/calm/1.jpg" alt="Calming scene 1">
+                </div>
+                <div class="image-options">
+                    <button class="save-button">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="share-button">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <div class="image">
+                    <img src="./images/calm/2.jpg" alt="Calming scene 2">
+                </div>
+                <div class="image-options">
+                    <button class="save-button">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="share-button">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <div class="image">
+                    <img src="./images/calm/3.jpg" alt="Calming scene 3">
+                </div>
+                <div class="image-options">
+                    <button class="save-button">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="share-button">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <div class="image">
+                    <img src="./images/calm/4.jpg" alt="Calming scene 4">
+                </div>
+                <div class="image-options">
+                    <button class="save-button">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="share-button">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <div class="image">
+                    <img src="./images/calm/5.jpg" alt="Calming scene 5">
+                </div>
+                <div class="image-options">
+                    <button class="save-button favorite">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="share-button">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <div class="image">
+                    <img src="./images/calm/6.jpg" alt="Calming scene 6">
+                </div>
+                <div class="image-options">
+                    <button class="save-button">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="share-button">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <div class="image">
+                    <img src="./images/calm/7.jpg" alt="Calming scene 7">
+                </div>
+                <div class="image-options">
+                    <button class="save-button">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="share-button">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <div class="image">
+                    <img src="./images/calm/8.jpg" alt="Calming scene 8">
+                </div>
+                <div class="image-options">
+                    <button class="save-button">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="share-button">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <div class="image">
+                    <img src="./images/calm/9.jpg" alt="Calming scene 9">
+                </div>
+                <div class="image-options">
+                    <button class="save-button">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="share-button">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <div class="image">
+                    <img src="./images/calm/10.jpg" alt="Calming scene 10">
+                </div>
+                <div class="image-options">
+                    <button class="save-button">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="share-button">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 添加自动重定向代码，根据屏幕宽度判断是否应该跳转到移动版
+        window.onload = function() {
+            if (window.innerWidth < 1024) {
+                window.location.href = 'anxious_images.html';
+            }
+            
+            // 为收藏按钮添加点击事件
+            document.querySelectorAll('.save-button').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('far')) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                        this.classList.add('favorite');
+                    } else {
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                        this.classList.remove('favorite');
+                    }
+                });
+            });
+            
+            // 为过滤选项添加点击事件
+            document.querySelectorAll('.filter-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector('.filter-item.active').classList.remove('active');
+                    this.classList.add('active');
+                });
+            });
+        };
+        
+        // 当窗口大小改变时也进行检查
+        window.onresize = function() {
+            if (window.innerWidth < 1024) {
+                window.location.href = 'anxious_images.html';
+            }
+        };
+    </script>
+</body>
+</html> 

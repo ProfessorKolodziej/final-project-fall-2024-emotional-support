@@ -15,8 +15,8 @@ body {
 }
 
 .app-title {
-    color: #8cb3d9;
-    font-size: 24px;
+    color: #252525;
+    font-size: 18px;
     font-weight: bold;
     font-family: 'Brush Script MT', cursive;
 }
@@ -29,6 +29,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 24px;
+    color: #252525;
 }
 
 .profile-icon i {
@@ -45,9 +47,10 @@ body {
 }
 
 .main-question {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
+    color: #252525;
 }
 
 .quote {
@@ -105,7 +108,8 @@ body {
 .mood-title {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin: 10px 0 5px;
+    color: #252525;
 }
 
 .mood-subtitle {

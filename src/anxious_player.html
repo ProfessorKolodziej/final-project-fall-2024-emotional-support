@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautiful things - 音乐播放</title>
-    <link rel="stylesheet" href="css/music_player.css">
+    <title>Weightless - 音乐播放</title>
+    <link rel="stylesheet" href="css/anxious_player.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="header">
         <div style="display: flex; align-items: center;">
-            <a href="happy.html" class="back-button">
+            <a href="anxious.html" class="back-button">
                 <i class="fas fa-arrow-left"></i>
             </a>
-            <div class="song-title">Beautiful things</div>
+            <div class="song-title">You'd Never Know</div>
         </div>
         <div class="more-options">
             <i class="fas fa-ellipsis-v"></i>
@@ -22,12 +22,12 @@
     
     <div class="player-container">
         <div class="album-art">
-            <img src="./images/bt.jpg" alt="Beautiful things album art">
+            <img src="./images/clmusic.png" alt="Weightless album art">
         </div>
         
         <div class="song-info">
-            <div class="song-name">Beautiful things</div>
-            <div class="artist-name">Benson Boone</div>
+            <div class="song-name">You'd Never Know</div>
+            <div class="artist-name">BLÜ EYES</div>
         </div>
         
         <div class="progress-container">
@@ -35,8 +35,8 @@
                 <div class="progress"></div>
             </div>
             <div class="time-info">
-                <div class="current-time">1:15</div>
-                <div class="total-time">3:45</div>
+                <div class="current-time">2:45</div>
+                <div class="total-time">8:10</div>
             </div>
         </div>
         
@@ -61,11 +61,11 @@
     
     <div class="playlist-item">
         <div class="playlist-image">
-            <img src="./images/nextsongs.jpg" alt="Happy Music">
+            <img src="./images/clmusic2.png" alt="Meditation Rain">
         </div>
         <div class="playlist-info">
-            <div class="playlist-title">Marry you</div>
-            <div class="playlist-artist">Benson Boone</div>
+            <div class="playlist-title">Anxious Heart</div>
+            <div class="playlist-artist">Jeremy Camp</div>
         </div>
         <div class="playlist-more">
             <i class="fas fa-ellipsis-v"></i>
@@ -73,10 +73,19 @@
     </div>
     
     <script>
-        // 为Beautiful things歌曲项添加点击事件
-        document.querySelector('.music-item').addEventListener('click', function() {
-            window.location.href = 'music_player.html';
-        });
+        // 添加自动重定向代码，根据屏幕宽度判断是否应该跳转到PC版
+        window.onload = function() {
+            if (window.innerWidth >= 1024) {
+                window.location.href = 'desktop_anxious_player.html';
+            }
+        };
+        
+        // 当窗口大小改变时也进行检查
+        window.onresize = function() {
+            if (window.innerWidth >= 1024) {
+                window.location.href = 'desktop_anxious_player.html';
+            }
+        };
     </script>
 </body>
 </html> 

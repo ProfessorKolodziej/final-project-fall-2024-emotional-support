@@ -20,7 +20,7 @@ body {
 }
 
 .app-title {
-    color: #8cb3d9;
+    color: #252525;
     font-size: 28px;
     font-weight: bold;
     font-family: 'Brush Script MT', cursive;
@@ -75,8 +75,8 @@ body {
 .main-question {
     font-size: 36px;
     font-weight: bold;
-    margin-bottom: 15px;
-    color: #333;
+    margin-bottom: 20px;
+    color: #252525;
 }
 
 .quote {
@@ -156,9 +156,10 @@ body {
 }
 
 .mood-title {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 0;
+    margin-bottom: 10px;
+    color: #252525;
 }
 
 .happy {

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy - 情绪支持应用</title>
-    <link rel="stylesheet" href="css/desktop_happy.css">
+    <title>Anxious - 情绪支持应用</title>
+    <link rel="stylesheet" href="css/desktop_anxious.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -22,24 +22,24 @@
     </div>
     
     <div class="container">
-        <h1 class="page-title">Happy</h1>
+        <h1 class="page-title">Anxious</h1>
         
         <div class="content-row">
             <div class="content-column">
                 <div class="section">
                     <div class="section-header">
-                        <div class="section-title">Uplifting Music</div>
+                        <div class="section-title">Calming Music</div>
                         <button class="more-button">More</button>
                     </div>
                     
                     <div class="music-list">
-                        <div class="music-item" onclick="window.location.href='desktop_music_player.html';">
+                        <div class="music-item" onclick="window.location.href='desktop_anxious_player.html';">
                             <div class="music-icon">
                                 <i class="fas fa-music"></i>
                             </div>
                             <div class="music-details">
-                                <div class="music-title">Beautiful things</div>
-                                <div class="music-artist">Benson Boone</div>
+                                <div class="music-title">Weightless</div>
+                                <div class="music-artist">Marconi Union</div>
                             </div>
                             <div class="play-button">
                                 <i class="fas fa-play"></i>
@@ -51,8 +51,8 @@
                                 <i class="fas fa-music"></i>
                             </div>
                             <div class="music-details">
-                                <div class="music-title">Beautiful things</div>
-                                <div class="music-artist">Benson Boone</div>
+                                <div class="music-title">Meditation Rain</div>
+                                <div class="music-artist">Nature Sounds</div>
                             </div>
                             <div class="play-button">
                                 <i class="fas fa-play"></i>
@@ -64,8 +64,8 @@
                                 <i class="fas fa-music"></i>
                             </div>
                             <div class="music-details">
-                                <div class="music-title">Beautiful things</div>
-                                <div class="music-artist">Benson Boone</div>
+                                <div class="music-title">Deep Relaxation</div>
+                                <div class="music-artist">Calm Music</div>
                             </div>
                             <div class="play-button">
                                 <i class="fas fa-play"></i>
@@ -78,18 +78,17 @@
             <div class="content-column">
                 <div class="section">
                     <div class="section-header">
-                        <div class="section-title">Inspiring Images</div>
-                        <button class="more-button" onclick="window.location.href='desktop_happy_images.html';">
-                            <button class="more-button">More</button>
-                        </button>
+                        <div class="section-title">Peaceful Images</div>
+                        <button class="more-button" onclick="window.location.href='desktop_anxious_images.html';">
+More                        </button>
                     </div>
                     
                     <div class="image-slider">
                         <div class="image-item">
-                            <img src="./images/img1.png" alt="Teddy bear on road trip">
+                            <img src="./images/calm/1.jpg" alt="Peaceful meadow">
                         </div>
                         <div class="image-item">
-                            <img src="./images/img2.png" alt="Teddy bear on road trip">
+                            <img src="./images/calm/2.jpg" alt="Still lake at sunset">
                         </div>
                     </div>
                     
@@ -147,14 +146,14 @@
         // 添加自动重定向代码，根据屏幕宽度判断是否应该跳转到移动版
         window.onload = function() {
             if (window.innerWidth < 1024) {
-                window.location.href = 'happy.html';
+                window.location.href = 'anxious.html';
             }
         };
         
         // 当窗口大小改变时也进行检查
         window.onresize = function() {
             if (window.innerWidth < 1024) {
-                window.location.href = 'happy.html';
+                window.location.href = 'anxious.html';
             }
         };
     </script>
