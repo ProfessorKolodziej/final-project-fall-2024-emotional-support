@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --primary-color: #8a9a5b;
+    --secondary-color: #bcd888;
+    --heart-color-1: #8bc34a;
+    --heart-color-2: #ff8fbc;
+    --heart-color-3: #9c74db;
+    --background-color: #f9f9f9;
+    --card-color: #ffffff;
+}
+
+body {
+    background-color: var(--background-color);
+    padding-bottom: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.back-button {
+    color: #333;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.page-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.section {
+    margin: 20px 0;
+    padding: 0 15px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-icon {
+    color: var(--heart-color-1);
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 保存的图片部分 */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.image-item {
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 为每个部分的heart图标设置不同颜色 */
+.section:nth-child(2) .section-icon {
+    color: var(--heart-color-1);
+}
+
+.section:nth-child(3) .section-icon {
+    color: var(--heart-color-2);
+}
+
+.section:nth-child(4) .section-icon {
+    color: var(--heart-color-3);
+}
+
+/* 保存的名言部分 */
+#saved-quotes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quote-item {
+    background-color: var(--card-color);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-content {
+    margin-bottom: 10px;
+}
+
+.quote-text {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.quote-author {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.save-button {
+    align-self: flex-end;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.save-button.saved {
+    background-color: var(--heart-color-2);
+}
+
+/* 保存的歌曲部分 */
+#saved-songs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.song-item {
+    background-color: var(--card-color);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+}
+
+.song-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--heart-color-3);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.song-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.song-artist {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.play-button {
+    width: 32px;
+    height: 32px;
+    background-color: var(--heart-color-3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.remove-song-button {
+    width: 28px;
+    height: 28px;
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-left: 8px;
+}
+
+.song-controls {
+    display: flex;
+    align-items: center;
+} 

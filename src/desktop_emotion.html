@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情绪支持应用</title>
+    <link rel="stylesheet" href="css/desktop_emotion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left-header">
+            <div class="app-title">Emotional Support</div>
+            <div class="top-navigation">
+                <a href="desktop.html" class="nav-link">Index</a>
+                <a href="#" class="nav-link">About</a>
+            </div>
+        </div>
+        <div class="profile-icon">
+            <i class="fas fa-user"></i>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1 id="page-title" class="page-title">情绪</h1>
+        
+        <div class="content-row">
+            <!-- 音乐部分 -->
+            <div class="content-column">
+                <div class="section" id="music-section">
+                    <div class="section-header">
+                        <div id="music-title" class="section-title">音乐</div>
+                        <button id="music-more" class="more-button">More</button>
+                    </div>
+                    
+                    <div id="music-container" class="music-list"></div>
+                </div>
+            </div>
+            
+            <!-- 图片部分 -->
+            <div class="content-column">
+                <div class="section" id="images-section">
+                    <div class="section-header">
+                        <div id="images-title" class="section-title">图片</div>
+                        <button id="images-more" class="more-button">More</button>
+                    </div>
+                    
+                    <div id="image-slider" class="image-slider"></div>
+                    
+                    <div class="image-navigation">
+                        <button class="prev-button">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="next-button">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 名言部分 -->
+        <div class="section" id="quotes-section">
+            <div class="section-header">
+                <div id="quotes-title" class="section-title">名言</div>
+                <button id="quotes-more" class="more-button">More</button>
+            </div>
+            
+            <div id="quotes-container" class="quotes-row"></div>
+        </div>
+    </div>
+    
+    <script>
+        // 从URL获取情绪类型
+        function getEmotionType() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const emotionType = urlParams.get('type');
+            return emotionType || 'happy'; // 默认为happy
+        }
+
+        // 设置CSS变量
+        function setThemeColors(primaryColor, secondaryColor) {
+            document.documentElement.style.setProperty('--primary-color', primaryColor);
+            document.documentElement.style.setProperty('--secondary-color', secondaryColor);
+        }
+
+        // 渲染音乐部分
+        function renderMusicSection(musicData) {
+            const container = document.getElementById('music-container');
+            container.innerHTML = '';
+            
+            document.getElementById('music-title').textContent = musicData.title;
+            document.getElementById('music-more').onclick = () => window.location.href = `desktop_music_player.html?type=${getEmotionType()}&index=0`;
+            
+            musicData.items.forEach((music, index) => {
+                const musicItem = document.createElement('div');
+                musicItem.className = 'music-item';
+                musicItem.onclick = () => window.location.href = `desktop_music_player.html?type=${getEmotionType()}&index=${index}`;
+                
+                musicItem.innerHTML = `
+                    <div class="music-icon">
+                        <i class="fas ${music.icon}"></i>
+                    </div>
+                    <div class="music-details">
+                        <div class="music-title">${music.title}</div>
+                        <div class="music-artist">${music.artist}</div>
+                    </div>
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                `;
+                
+                container.appendChild(musicItem);
+            });
+        }
+
+        // 渲染图片滑块
+        function renderImageSlider(imagesData) {
+            const slider = document.getElementById('image-slider');
+            slider.innerHTML = '';
+            
+            document.getElementById('images-title').textContent = imagesData.title;
+            document.getElementById('images-more').onclick = () => window.location.href = `desktop_emotion_images.html?type=${getEmotionType()}`;
+            
+            imagesData.items.forEach((imageUrl, index) => {
+                const imageItem = document.createElement('div');
+                imageItem.className = 'image-item';
+                if (index === 0) {
+                    imageItem.style.opacity = '1';
+                }
+                
+                imageItem.innerHTML = `<img src="${imageUrl}" alt="Emotion image">`;
+                
+                slider.appendChild(imageItem);
+            });
+            
+            // 为滑块添加导航功能
+            let currentSlide = 0;
+            const slides = slider.querySelectorAll('.image-item');
+            
+            document.querySelector('.prev-button').addEventListener('click', () => {
+                slides[currentSlide].style.opacity = '0';
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                slides[currentSlide].style.opacity = '1';
+            });
+            
+            document.querySelector('.next-button').addEventListener('click', () => {
+                slides[currentSlide].style.opacity = '0';
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].style.opacity = '1';
+            });
+        }
+
+        // 渲染名言部分
+        function renderQuotesSection(quotesData) {
+            const container = document.getElementById('quotes-container');
+            container.innerHTML = '';
+            
+            document.getElementById('quotes-title').textContent = quotesData.title;
+            document.getElementById('quotes-more').onclick = () => window.location.href = `desktop_emotion_quotes.html?type=${getEmotionType()}`;
+            
+            quotesData.items.forEach(quote => {
+                const quoteCard = document.createElement('div');
+                quoteCard.className = 'quote-card';
+                
+                quoteCard.innerHTML = `
+                    <button class="heart-button">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <div class="quote-text">${quote.text}</div>
+                    <div class="quote-author">${quote.author}</div>
+                `;
+                
+                container.appendChild(quoteCard);
+            });
+        }
+
+        // 处理重定向
+        function handleRedirect(mobileRedirect) {
+            // 添加自动重定向代码，根据屏幕宽度判断是否应该跳转到移动版
+            if (window.innerWidth < 1024) {
+                // 从URL中获取emotion类型参数
+                const emotionType = getEmotionType();
+                window.location.href = `emotion.html?type=${emotionType}`;
+            }
+            
+            // 当窗口大小改变时也进行检查
+            window.onresize = function() {
+                if (window.innerWidth < 1024) {
+                    const emotionType = getEmotionType();
+                    window.location.href = `emotion.html?type=${emotionType}`;
+                }
+            };
+        }
+
+        // 初始化页面
+        function initPage() {
+            const emotionType = getEmotionType();
+            
+            fetch('./emotions.json')
+                .then(response => response.json())
+                .then(data => {
+                    const emotionData = data[emotionType];
+                    if (!emotionData) {
+                        console.error('Emotion type not found in configuration');
+                        return;
+                    }
+                    
+                    // 设置页面标题
+                    document.title = emotionData.title + ' - 情绪支持应用';
+                    document.getElementById('page-title').textContent = emotionData.title;
+                    
+                    // 设置主题颜色
+                    setThemeColors(emotionData.primaryColor, emotionData.secondaryColor);
+                    
+                    // 渲染各部分内容
+                    renderMusicSection(emotionData.sections.music);
+                    renderImageSlider(emotionData.sections.images);
+                    renderQuotesSection(emotionData.sections.quotes);
+                    
+                    // 处理移动版重定向
+                    handleRedirect();
+                })
+                .catch(error => {
+                    console.error('Error loading emotion data:', error);
+                });
+        }
+        
+        // 初始化页面
+        window.onload = initPage;
+        
+        // 为心形按钮添加点击事件
+        document.addEventListener('click', function(event) {
+            if (event.target.closest('.heart-button')) {
+                const heartButton = event.target.closest('.heart-button');
+                const icon = heartButton.querySelector('i');
+                
+                icon.classList.toggle('far');
+                icon.classList.toggle('fas');
+            }
+        });
+    </script>
+</body>
+</html> 

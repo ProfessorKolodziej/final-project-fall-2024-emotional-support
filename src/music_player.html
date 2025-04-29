@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautiful things - 音乐播放</title>
+    <title>音乐播放 - 情绪支持应用</title>
     <link rel="stylesheet" href="css/music_player.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="js/storage.js"></script>
 </head>
 <body>
     <div class="header">
         <div style="display: flex; align-items: center;">
-            <a href="happy.html" class="back-button">
+            <a id="back-link" href="emotion.html?type=happy" class="back-button">
                 <i class="fas fa-arrow-left"></i>
             </a>
-            <div class="song-title">Beautiful things</div>
+            <div id="song-title" class="song-title">音乐播放</div>
         </div>
         <div class="more-options">
             <i class="fas fa-ellipsis-v"></i>
@@ -22,61 +23,366 @@
     
     <div class="player-container">
         <div class="album-art">
-            <img src="./images/bt.jpg" alt="Beautiful things album art">
+            <img id="album-cover" src="./images/bt.jpg" alt="Album cover">
         </div>
         
         <div class="song-info">
-            <div class="song-name">Beautiful things</div>
-            <div class="artist-name">Benson Boone</div>
+            <div id="song-name" class="song-name">加载中...</div>
+            <div id="artist-name" class="artist-name">加载中...</div>
         </div>
         
         <div class="progress-container">
             <div class="progress-bar">
-                <div class="progress"></div>
+                <div id="progress" class="progress"></div>
             </div>
             <div class="time-info">
-                <div class="current-time">1:15</div>
-                <div class="total-time">3:45</div>
+                <div id="current-time" class="current-time">0:00</div>
+                <div id="total-time" class="total-time">0:00</div>
             </div>
         </div>
         
         <div class="controls">
-            <div class="control-button previous">
+            <div id="prev-button" class="control-button previous">
                 <i class="fas fa-backward"></i>
             </div>
-            <div class="play-button">
-                <i class="fas fa-pause"></i>
+            <div id="play-button" class="play-button">
+                <i id="play-icon" class="fas fa-play"></i>
             </div>
-            <div class="control-button next">
+            <div id="next-button" class="control-button next">
                 <i class="fas fa-forward"></i>
             </div>
         </div>
         
         <div class="bottom-actions">
-            <div class="action-button favorite">
+            <div id="favorite-button" class="action-button favorite">
                 <i class="far fa-heart"></i>
             </div>
         </div>
     </div>
     
-    <div class="playlist-item">
-        <div class="playlist-image">
-            <img src="./images/nextsongs.jpg" alt="Happy Music">
-        </div>
-        <div class="playlist-info">
-            <div class="playlist-title">Marry you</div>
-            <div class="playlist-artist">Benson Boone</div>
-        </div>
-        <div class="playlist-more">
-            <i class="fas fa-ellipsis-v"></i>
-        </div>
-    </div>
+    <div id="playlist-container"></div>
+    
+    <audio id="audio-player"></audio>
     
     <script>
-        // 为Beautiful things歌曲项添加点击事件
-        document.querySelector('.music-item').addEventListener('click', function() {
-            window.location.href = 'music_player.html';
+        // 获取URL参数
+        function getUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                type: params.get('type') || 'happy',
+                index: parseInt(params.get('index') || '0')
+            };
+        }
+        
+        // 格式化时间为分钟:秒
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+        
+        // 播放器状态
+        let currentEmotion = 'happy';
+        let currentSongs = [];
+        let currentIndex = 0;
+        let isPlaying = false;
+        
+        // 获取DOM元素
+        const audioPlayer = document.getElementById('audio-player');
+        const playButton = document.getElementById('play-button');
+        const playIcon = document.getElementById('play-icon');
+        const prevButton = document.getElementById('prev-button');
+        const nextButton = document.getElementById('next-button');
+        const progress = document.getElementById('progress');
+        const currentTimeEl = document.getElementById('current-time');
+        const totalTimeEl = document.getElementById('total-time');
+        const albumCover = document.getElementById('album-cover');
+        const songName = document.getElementById('song-name');
+        const artistName = document.getElementById('artist-name');
+        const songTitle = document.getElementById('song-title');
+        const favoriteButton = document.getElementById('favorite-button');
+        const backLink = document.getElementById('back-link');
+        const playlistContainer = document.getElementById('playlist-container');
+        
+        // 播放或暂停
+        function togglePlay() {
+            if (isPlaying) {
+                audioPlayer.pause();
+                playIcon.classList.remove('fa-pause');
+                playIcon.classList.add('fa-play');
+            } else {
+                audioPlayer.play();
+                playIcon.classList.remove('fa-play');
+                playIcon.classList.add('fa-pause');
+            }
+            isPlaying = !isPlaying;
+        }
+        
+        // 播放上一首
+        function playPrevious() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                loadSong();
+            }
+        }
+        
+        // 播放下一首
+        function playNext() {
+            if (currentIndex < currentSongs.length - 1) {
+                currentIndex++;
+                loadSong();
+            }
+        }
+        
+        // 更新进度条
+        function updateProgress() {
+            const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            progress.style.width = `${percent}%`;
+            currentTimeEl.textContent = formatTime(audioPlayer.currentTime);
+        }
+        
+        // 设置播放时间
+        function setProgress(e) {
+            const width = this.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audioPlayer.duration;
+            audioPlayer.currentTime = (clickX / width) * duration;
+        }
+        
+        // 加载并播放歌曲
+        function loadSong() {
+            if (currentSongs.length <= 0 || currentIndex < 0 || currentIndex >= currentSongs.length) {
+                return;
+            }
+            
+            const song = currentSongs[currentIndex];
+            
+            // 更新URL以反映当前歌曲
+            const newUrl = `music_player.html?type=${currentEmotion}&index=${currentIndex}`;
+            window.history.replaceState({}, '', newUrl);
+            
+            // 更新页面元素
+            songName.textContent = song.title;
+            artistName.textContent = song.artist;
+            songTitle.textContent = song.title;
+            albumCover.src = song.coverSrc;
+            
+            // 设置音频源
+            audioPlayer.src = song.audioSrc;
+            
+            // 设置总时长
+            totalTimeEl.textContent = song.duration;
+            
+            // 如果之前是播放状态，则自动开始播放
+            if (isPlaying) {
+                audioPlayer.play();
+            }
+            
+            // 更新后退链接
+            backLink.href = `emotion.html?type=${currentEmotion}`;
+            
+            // 更新播放列表高亮
+            updatePlaylistHighlight();
+            
+            // 检查当前歌曲是否已保存
+            updateFavoriteButton(song);
+        }
+        
+        // 更新收藏按钮状态
+        function updateFavoriteButton(song) {
+            const songData = {
+                title: song.title,
+                artist: song.artist,
+                cover: song.coverSrc
+            };
+            
+            const isSaved = isItemSaved('savedSongs', songData);
+            const icon = favoriteButton.querySelector('i');
+            
+            if (isSaved) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+            } else {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+            }
+        }
+        
+        // 显示提示信息
+        function showToast(message) {
+            // 检查是否已有toast
+            let toast = document.querySelector('.toast');
+            
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.className = 'toast';
+                document.body.appendChild(toast);
+            }
+            
+            // 设置消息并显示
+            toast.textContent = message;
+            toast.classList.add('show');
+            
+            // 2秒后隐藏
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+        
+        // 加载播放列表
+        function loadPlaylist() {
+            playlistContainer.innerHTML = '';
+            
+            if (currentSongs.length <= 0) {
+                return;
+            }
+            
+            currentSongs.forEach((song, index) => {
+                if (index === currentIndex) return; // 跳过当前播放的歌曲
+                
+                const playlistItem = document.createElement('div');
+                playlistItem.className = 'playlist-item';
+                playlistItem.dataset.index = index;
+                
+                playlistItem.innerHTML = `
+                    <div class="playlist-image">
+                        <img src="${song.coverSrc}" alt="${song.title}">
+                    </div>
+                    <div class="playlist-info">
+                        <div class="playlist-title">${song.title}</div>
+                        <div class="playlist-artist">${song.artist}</div>
+                    </div>
+                    <div class="playlist-more">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                `;
+                
+                playlistItem.addEventListener('click', () => {
+                    currentIndex = index;
+                    loadSong();
+                    isPlaying = false;
+                    togglePlay();
+                });
+                
+                playlistContainer.appendChild(playlistItem);
+            });
+        }
+        
+        // 更新播放列表高亮
+        function updatePlaylistHighlight() {
+            const playlistItems = document.querySelectorAll('.playlist-item');
+            playlistItems.forEach(item => {
+                const index = parseInt(item.dataset.index);
+                if (index === currentIndex) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+        
+        // 初始化音乐播放器
+        function initMusicPlayer() {
+            // 获取URL参数
+            const params = getUrlParams();
+            currentEmotion = params.type;
+            currentIndex = params.index;
+            
+            // 从JSON加载歌曲数据
+            fetch('./emotions.json')
+                .then(response => response.json())
+                .then(data => {
+                    const emotionData = data[currentEmotion];
+                    if (!emotionData) {
+                        console.error('Emotion type not found');
+                        return;
+                    }
+                    
+                    currentSongs = emotionData.sections.music.items;
+                    document.title = emotionData.title + ' - 音乐播放 - 情绪支持应用';
+                    
+                    // 设置主题颜色
+                    document.documentElement.style.setProperty('--primary-color', emotionData.primaryColor);
+                    document.documentElement.style.setProperty('--secondary-color', emotionData.secondaryColor);
+                    
+                    // 加载当前歌曲
+                    loadSong();
+                    
+                    // 加载播放列表
+                    loadPlaylist();
+                })
+                .catch(error => {
+                    console.error('Error loading emotion data:', error);
+                });
+        }
+        
+        // 事件监听
+        playButton.addEventListener('click', togglePlay);
+        prevButton.addEventListener('click', playPrevious);
+        nextButton.addEventListener('click', playNext);
+        
+        audioPlayer.addEventListener('timeupdate', updateProgress);
+        audioPlayer.addEventListener('ended', playNext);
+        
+        document.querySelector('.progress-bar').addEventListener('click', setProgress);
+        
+        favoriteButton.addEventListener('click', function() {
+            const icon = this.querySelector('i');
+            const song = currentSongs[currentIndex];
+            
+            // 创建要保存的歌曲对象
+            const songData = {
+                title: song.title,
+                artist: song.artist,
+                cover: song.coverSrc
+            };
+            
+            if (icon.classList.contains('far')) {
+                // 保存歌曲
+                if (saveItem('savedSongs', songData)) {
+                    // 更新UI
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                    
+                    // 显示保存成功提示
+                    showToast('Song saved successfully!');
+                }
+            } else {
+                // 从保存中移除
+                const savedSongs = JSON.parse(localStorage.getItem('savedSongs') || '[]');
+                const songIndex = savedSongs.findIndex(s => 
+                    s.title === songData.title && s.artist === songData.artist
+                );
+                
+                if (songIndex !== -1 && removeItem('savedSongs', songIndex)) {
+                    // 更新UI
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                    
+                    // 显示移除成功提示
+                    showToast('Song removed from saved items');
+                }
+            }
         });
+        
+        // 页面加载时初始化
+        window.onload = function() {
+            initMusicPlayer();
+            
+            // 屏幕宽度检测并重定向
+            if (window.innerWidth >= 1024) {
+                const params = getUrlParams();
+                window.location.href = `desktop_music_player.html?type=${params.type}&index=${params.index}`;
+            }
+        };
+        
+        // 窗口大小变化时检测并重定向
+        window.onresize = function() {
+            if (window.innerWidth >= 1024) {
+                const params = getUrlParams();
+                window.location.href = `desktop_music_player.html?type=${params.type}&index=${params.index}`;
+            }
+        };
     </script>
 </body>
 </html> 

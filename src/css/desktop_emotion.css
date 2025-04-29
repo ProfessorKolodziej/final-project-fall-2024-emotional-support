@@ -1,0 +1,306 @@
+/* 桌面版基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --primary-color: #ffcc66;
+    --secondary-color: #ffeb99;
+}
+
+body {
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+}
+
+.app-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+.top-navigation {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+.profile-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.content-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.content-column {
+    flex: 1;
+}
+
+.section {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.more-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.more-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* 音乐部分 */
+.music-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.music-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.music-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.music-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 20px;
+}
+
+.music-details {
+    flex: 1;
+}
+
+.music-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.music-artist {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.play-button {
+    width: 40px;
+    height: 40px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.music-item:hover .play-button {
+    background-color: var(--primary-color);
+}
+
+/* 图片滑块 */
+.image-slider {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 300px;
+    margin-bottom: 15px;
+}
+
+.image-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.image-item:first-child {
+    opacity: 1;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.prev-button,
+.next-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* 名言卡片 */
+.quotes-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.quote-card {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    padding: 25px;
+    color: white;
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+}
+
+.heart-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.quote-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.quote-author {
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.more-quotes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .content-row {
+        flex-direction: column;
+    }
+} 

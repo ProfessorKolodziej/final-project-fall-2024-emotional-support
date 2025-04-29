@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --primary-color: #ffcc66;
+    --secondary-color: #ffeb99;
+}
+
+body {
+    background-color: #f9f9f9;
+    padding-bottom: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.page-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.more-options {
+    font-size: 1.2rem;
+}
+
+.quotes-container {
+    padding: 15px;
+}
+
+.quote-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quote-content {
+    margin-bottom: 15px;
+}
+
+.quote-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.quote-author {
+    font-size: 0.9rem;
+    text-align: right;
+    color: #777;
+}
+
+.save-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.save-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* 响应式设计 */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .quotes-container {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .quote-card {
+        margin-bottom: 0;
+    }
+}
+
+/* Toast提示样式 */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+    text-align: center;
+    max-width: 80%;
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 已保存按钮样式 */
+.save-button.saved {
+    background-color: var(--primary-color);
+    color: white;
+} 

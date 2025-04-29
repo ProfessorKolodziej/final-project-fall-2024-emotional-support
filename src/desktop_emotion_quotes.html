@@ -6,6 +6,13 @@
     <title>Quotes - 情绪支持应用</title>
     <link rel="stylesheet" href="css/desktop_quotes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* 确保颜色变量在DOM加载前应用 */
+        :root {
+            --primary-color: #ffcc66;
+            --secondary-color: #ffeb99;
+        }
+    </style>
 </head>
 <body>
     <div class="header">
@@ -23,7 +30,7 @@
     
     <div class="container">
         <div class="page-header">
-            <a id="back-link" href="desktop_happy.html" class="back-button">
+            <a id="back-link" href="desktop_emotion.html?type=happy" class="back-button">
                 <i class="fas fa-arrow-left"></i> Back
             </a>
             <h1 id="page-title" class="page-title">Quotes</h1>
@@ -47,12 +54,24 @@
         function setThemeColors(primaryColor, secondaryColor) {
             document.documentElement.style.setProperty('--primary-color', primaryColor);
             document.documentElement.style.setProperty('--secondary-color', secondaryColor);
+            
+            // 调试检查颜色是否设置
+            console.log(`Setting colors to: Primary=${primaryColor}, Secondary=${secondaryColor}`);
         }
         
         // 加载名言
         function loadQuotes(quotes) {
             const quotesContainer = document.getElementById('quotes-container');
             quotesContainer.innerHTML = '';
+            
+            // 确保quotes是有效数组
+            if (!Array.isArray(quotes) || quotes.length === 0) {
+                console.error('No quotes found or invalid quotes data:', quotes);
+                quotesContainer.innerHTML = '<div class="error-message">找不到引言数据</div>';
+                return;
+            }
+            
+            console.log(`Loading ${quotes.length} quotes`);
             
             quotes.forEach(quote => {
                 const quoteCard = document.createElement('div');
@@ -93,30 +112,53 @@
             const params = getUrlParams();
             const emotionType = params.type;
             
+            console.log(`Initializing page with emotion type: ${emotionType}`);
+            
             fetch('./emotions.json')
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
                 .then(data => {
+                    console.log(`Loaded emotions data:`, Object.keys(data));
+                    
                     const emotionData = data[emotionType];
                     if (!emotionData) {
-                        console.error('Emotion type not found in configuration');
+                        console.error(`Emotion type "${emotionType}" not found in configuration`);
                         return;
                     }
+                    
+                    console.log(`Found emotion data for ${emotionType}:`, emotionData.title);
                     
                     // 设置页面标题
                     document.title = emotionData.sections.quotes.title + ' - 情绪支持应用';
                     document.getElementById('page-title').textContent = emotionData.sections.quotes.title;
                     
-                    // 设置主题颜色
+                    // 设置主题颜色 - 确保是立即应用
                     setThemeColors(emotionData.primaryColor, emotionData.secondaryColor);
                     
-                    // 更新后退链接
+                    // 直接应用主题颜色到header元素
+                    document.querySelector('.header').style.backgroundColor = emotionData.primaryColor;
+                    
+                    // 更新后退链接 - 修正指向
                     document.getElementById('back-link').href = `desktop_emotion.html?type=${emotionType}`;
                     
-                    // 加载名言
-                    loadQuotes(emotionData.sections.quotes.allQuotes);
+                    // 加载名言 - 确保allQuotes存在
+                    if (emotionData.sections.quotes && emotionData.sections.quotes.allQuotes) {
+                        loadQuotes(emotionData.sections.quotes.allQuotes);
+                    } else {
+                        console.error('Quote data structure is incorrect:', emotionData.sections.quotes);
+                    }
                 })
                 .catch(error => {
                     console.error('Error loading emotion data:', error);
+                    document.querySelector('.container').innerHTML += `
+                        <div class="error-message" style="color: red; padding: 20px;">
+                            加载数据错误: ${error.message}
+                        </div>
+                    `;
                 });
         }
         
@@ -140,4 +182,4 @@
         };
     </script>
 </body>
-</html>
+</html> 

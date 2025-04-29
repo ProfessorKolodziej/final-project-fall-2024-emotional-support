@@ -1,0 +1,654 @@
+{
+  "happy": {
+    "title": "Happy",
+    "primaryColor": "#ffcc66",
+    "secondaryColor": "#ffeb99",
+    "sections": {
+      "music": {
+        "title": "Uplifting Music",
+        "items": [
+          {
+            "title": "Beautiful things",
+            "artist": "Benson Boone",
+            "icon": "fa-music",
+            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400003XxBCq2nBHJ2.m4a?guid=367829399&vkey=96E7F5325F8175BF21FBEFECAD55F04BD46A67CEE53F1194F64F358BC67E1BC8780107EB9ED900874BEE02718760951A7AF86B9235FDE4D6__v21e2a1872&uin=&fromtag=120032&src=C400001ARmGA3GV3Yg.m4a",
+            "coverSrc": "./audio/happy/2.png",
+            "duration": "3:45"
+          },
+          {
+            "title": "Happy",
+            "artist": "Pharrell Williams",
+            "icon": "fa-music",
+            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400000wlgZH0OP6oF.m4a?guid=341522699&vkey=7837F997BEACBD815A667EF166E2496AF130589EE45E361D4767CA81FF347F27676C1041558394B59393568B9F2C2CBF3DE325B28A56F9D3__v21e2a1734&uin=&fromtag=120032",
+            "coverSrc": "./audio/happy/1.png",
+            "duration": "3:53"
+          },
+          {
+            "title": "Marry you",
+            "artist": "Benson Boone",
+            "icon": "fa-music",
+            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400004VMZVJ3fYywS.m4a?guid=366513136&vkey=ACF00DC67521FE1B63643C5AB21C9B0F2B40B19DD908C7E771572EA88E259A70F4F796A2AD234F61EA029FDBBD36B2DC4C9DD8786AE3CBE8__v2b9abb63&uin=&fromtag=120032",
+            "coverSrc": "./audio/happy/3.png",
+            "duration": "3:58"
+          }
+        ],
+        "moreLink": "music_player.html?type=happy&index=0"
+      },
+      "images": {
+        "title": "Inspiring Images",
+        "items": [
+          "./images/img1.png",
+          "./images/img2.png"
+        ],
+        "moreLink": "happy_images.html",
+        "galleryImages": [
+          {
+            "src": "./images/happy/1.jpg",
+            "alt": "Happy moment 1"
+          },
+          {
+            "src": "./images/happy/2.jpg",
+            "alt": "Happy moment 2"
+          },
+          {
+            "src": "./images/happy/3.jpg",
+            "alt": "Happy moment 3"
+          },
+          {
+            "src": "./images/happy/4.jpg",
+            "alt": "Happy moment 4"
+          },
+          {
+            "src": "./images/happy/5.jpg",
+            "alt": "Happy moment 5"
+          },
+          {
+            "src": "./images/happy/6.jpg",
+            "alt": "Happy moment 6"
+          },
+          {
+            "src": "./images/happy/7.jpg",
+            "alt": "Happy moment 7"
+          },
+          {
+            "src": "./images/happy/8.jpg",
+            "alt": "Happy moment 8"
+          },
+          {
+            "src": "./images/happy/9.jpg",
+            "alt": "Happy moment 9"
+          },
+          {
+            "src": "./images/happy/10.jpg",
+            "alt": "Happy moment 10"
+          }
+        ]
+      },
+      "quotes": {
+        "title": "Daily Affirmations",
+        "items": [
+          {
+            "text": "\"Whoever is happy will make others happy.\"",
+            "author": "- Anne Frank, The Diary of a Young Girl"
+          },
+          {
+            "text": "\"Be the change that you wish to see in the world.\"",
+            "author": "- Mahatma Gandhi"
+          },
+          {
+            "text": "\"There is no way to happiness – happiness is the way.\"",
+            "author": "- Thich Nhat Hanh"
+          }
+        ],
+        "moreLink": "quotes.html",
+        "allQuotes": [
+          {
+            "text": "\"Whoever is happy will make others happy.\"",
+            "author": "- Anne Frank, The Diary of a Young Girl"
+          },
+          {
+            "text": "\"Be the change that you wish to see in the world.\"",
+            "author": "- Mahatma Gandhi"
+          },
+          {
+            "text": "\"There is no way to happiness – happiness is the way.\"",
+            "author": "- Thich Nhat Hanh"
+          },
+          {
+            "text": "\"Happiness shared is happiness doubled.\"",
+            "author": "— Swedish Proverb"
+          },
+          {
+            "text": "\"Count your age by friends, not years. Count your life by smiles, not tears.\"",
+            "author": "— John Lennon"
+          },
+          {
+            "text": "\"Happiness in intelligent people is the rarest thing I know.\"",
+            "author": "— Ernest Hemingway, The Garden of Eden"
+          }
+        ]
+      }
+    },
+    "desktopRedirect": "desktop_emotion.html?type=happy"
+  },
+  "sad": {
+    "title": "Sad",
+    "primaryColor": "#6699cc",
+    "secondaryColor": "#A7E3FF",
+    "sections": {
+      "music": {
+        "title": "Comforting Music",
+        "items": [
+          {
+            "title": "I Want You to Know",
+            "artist": "Zedd",
+            "icon": "fa-music",
+            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400003xdrWF31ZICo.m4a?guid=724686015&vkey=B866D5727EDE386A2030599E7AA3DF0F2061E4E42830F94C9A302CB32755C8CD91729B073F88BA1D7E5DCE0D96F5CB2B4B98D3E185B8EA88__v21e2a1872&uin=&fromtag=120032",
+            "coverSrc": "./audio/sad/1.png",
+            "duration": "3:02"
+          },
+          {
+            "title": "How Far I'll Go",
+            "artist": "Auliʻi Cravalho",
+            "icon": "fa-music",
+            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400003MhqSp0n2jSs.m4a?guid=180505511&vkey=63925732A3483EE86BD6C959CBEA04CDBB2EE8FBACF3CFAF778CE904BC59FC3553D09DEC8092301D258BEB9B67BB1AF618880928B7C6A422__v21e2a1871&uin=&fromtag=120032",
+            "coverSrc": "./audio/sad/2.png",
+            "duration": "4:55"
+          },
+          {
+            "title": "I'm Yours",
+            "artist": "Jason Mraz",
+            "icon": "fa-music",
+            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400002yOSU7420kDa.m4a?guid=574432069&vkey=732EF05ABBD7F4C630A794914940BE666C5933921BB24D1C893D670F7E1246D42CD1629116588BD5A2E75E347B332E9B5B86A77B31E8B303__v2b9ab34c&uin=&fromtag=120032",
+            "coverSrc": "./audio/sad/3.png",
+            "duration": "4:51"
+          }
+        ],
+        "moreLink": "music_player.html?type=sad&index=0"
+      },
+      "images": {
+        "title": "Calming Images",
+        "items": [
+          "./images/sad/1.jpg",
+          "./images/sad/2.jpg"
+        ],
+        "moreLink": "sad_images.html",
+        "galleryImages": [
+          {
+            "src": "./images/sad/1.jpg",
+            "alt": "Calming scene 1"
+          },
+          {
+            "src": "./images/sad/2.jpg",
+            "alt": "Calming scene 2"
+          },
+          {
+            "src": "./images/sad/3.jpg",
+            "alt": "Calming scene 3"
+          },
+          {
+            "src": "./images/sad/4.jpg",
+            "alt": "Calming scene 4"
+          },
+          {
+            "src": "./images/sad/5.jpg",
+            "alt": "Calming scene 5"
+          },
+          {
+            "src": "./images/sad/6.jpg",
+            "alt": "Calming scene 6"
+          },
+          {
+            "src": "./images/sad/7.jpg",
+            "alt": "Calming scene 7"
+          },
+          {
+            "src": "./images/sad/8.jpg",
+            "alt": "Calming scene 8"
+          }
+        ]
+      },
+      "quotes": {
+        "title": "Healing Words",
+        "items": [
+          {
+            "text": "\"But I know, somehow, that only when it is dark enough can you see the stars.\"",
+            "author": "- Martin Luther King, Jr."
+          },
+          {
+            "text": "\"There is a crack in everything. That's how the light gets in.\"",
+            "author": "– Leonard Cohen"
+          },
+          {
+            "text": "\"The flower that blooms in adversity is the rarest and most beautiful of all.\"",
+            "author": "– Mulan"
+          }
+        ],
+        "moreLink": "sad_quotes.html",
+        "allQuotes": [
+          {
+            "text": "\"But I know, somehow, that only when it is dark enough can you see the stars.\"",
+            "author": "- Martin Luther King, Jr."
+          },
+          {
+            "text": "\"There is a crack in everything. That's how the light gets in.\"",
+            "author": "– Leonard Cohen"
+          },
+          {
+            "text": "\"The flower that blooms in adversity is the rarest and most beautiful of all.\"",
+            "author": "– Mulan"
+          },
+          {
+            "text": "\"Problems are not stop signs; they are guidelines.\"",
+            "author": "– Robert H. Schuller"
+          },
+          {
+            "text": "\"Life is not a problem to be solved, but a reality to be experienced.\"",
+            "author": "– Søren Kierkegaard"
+          },
+          {
+            "text": "\"All our dreams can come true if we have the courage to pursue them.\"",
+            "author": "– Walt Disney"
+          }
+        ]
+      }
+    },
+    "desktopRedirect": "desktop_emotion.html?type=sad"
+  },
+  "anxious": {
+    "title": "Anxious",
+    "primaryColor": "#C59BF8",
+    "secondaryColor": "#C88EFF",
+    "sections": {
+      "music": {
+        "title": "Calming Music",
+        "items": [
+          {
+            "title": "You'd Never Know",
+            "artist": "BLÜ EYES",
+            "icon": "fa-music",
+            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400002M0ZM81bjQMm.m4a?guid=565056161&vkey=F7631FCD803D5F6470BBAB5666703779D9B66E34D704745B4383F182C65FEE77DCB22217C0A0F041AF65C2B984186E746AF30F5B599E90CD__v2b9ab755&uin=&fromtag=120032&src=C400002UTd3815bBlY.m4a",
+            "coverSrc": "./audio/anxious/1.png",
+            "duration": "4:10"
+          },
+          {
+            "title": "Anxious Heart",
+            "artist": "Jeremy Camp",
+            "icon": "fa-music",
+            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400000JYdFz2Ki2nD.m4a?guid=576235457&vkey=BE9A8394CFEF502D9BB2CD104E3013351B7BB3317259704F41F0427572F55BE4759D29B7A8D654FECA0FFDBF750800565E851DFC06C06818__v2b9ab33c&uin=&fromtag=120032",
+            "coverSrc": "./audio/anxious/2.png",
+            "duration": "8:09"
+          },
+          {
+            "title": "Better Off",
+            "artist": "Lindsey Ray",
+            "icon": "fa-music",
+            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400001AbanQ40JWQU.m4a?guid=167702415&vkey=E0AE245E0C2075FDD3F57F0342F850A8104B1E8BED9D81A1C18F13CEA74BD70E0B663FB99F63BF99D0276FEF103CDEDCE1A1CFEF7FA3B874__v21e2a1874&uin=&fromtag=120032&src=C400000xMqyN2HdW9d.m4a",
+            "coverSrc": "./audio/anxious/3.png",
+            "duration": "5:30"
+          }
+        ],
+        "moreLink": "music_player.html?type=anxious&index=0"
+      },
+      "images": {
+        "title": "Soothing Images",
+        "items": [
+          "./images/anxious/1.jpg",
+          "./images/anxious/2.jpg"
+        ],
+        "moreLink": "anxious_images.html",
+        "galleryImages": [
+          {
+            "src": "./images/anxious/1.jpg",
+            "alt": "Peaceful scene 1"
+          },
+          {
+            "src": "./images/anxious/2.jpg",
+            "alt": "Peaceful scene 2"
+          },
+          {
+            "src": "./images/anxious/3.jpg",
+            "alt": "Peaceful scene 3"
+          },
+          {
+            "src": "./images/anxious/4.jpg",
+            "alt": "Peaceful scene 4"
+          },
+          {
+            "src": "./images/anxious/5.jpg",
+            "alt": "Peaceful scene 5"
+          },
+          {
+            "src": "./images/anxious/6.jpg",
+            "alt": "Peaceful scene 6"
+          },
+          {
+            "src": "./images/anxious/7.jpg",
+            "alt": "Peaceful scene 7"
+          },
+          {
+            "src": "./images/anxious/8.jpg",
+            "alt": "Peaceful scene 8"
+          },
+          {
+            "src": "./images/anxious/9.jpg",
+            "alt": "Peaceful scene 9"
+          },
+          {
+            "src": "./images/anxious/10.jpg",
+            "alt": "Peaceful scene 10"
+          }
+        ]
+      },
+      "quotes": {
+        "title": "Calming Affirmations",
+        "items": [
+          {
+            "text": "\"You don't drown by falling into water. You only drown if you stay there.\"",
+            "author": "— Zig Ziglar"
+          },
+          {
+            "text": "\"Just when the caterpillar thought the world was ending, he turned into a butterfly.\"",
+            "author": "— Proverb"
+          },
+          {
+            "text": "\"Happiness is not a brilliant climax to years of grim struggle and anxiety. It is a long succession of little decisions simply to be happy in the moment.\"",
+            "author": "— J. Donald Walters"
+          }
+        ],
+        "moreLink": "anxious_quotes.html",
+        "allQuotes": [
+          {
+            "text": "\"You don't drown by falling into water. You only drown if you stay there.\"",
+            "author": "— Zig Ziglar"
+          },
+          {
+            "text": "\"Just when the caterpillar thought the world was ending, he turned into a butterfly.\"",
+            "author": "— Proverb"
+          },
+          {
+            "text": "\"Happiness is not a brilliant climax to years of grim struggle and anxiety. It is a long succession of little decisions simply to be happy in the moment.\"",
+            "author": "— J. Donald Walters"
+          },
+          {
+            "text": "\"\"By being yourself, you put something wonderful in the world that was not there before.\"\"",
+            "author": "— Edwin Elliot"
+          },
+          {
+            "text": "\"\"Most people are about as happy as they make their minds up to be.\"\"",
+            "author": "— Abraham Lincoln"
+          },
+          {
+            "text": "\"\"Nothing diminishes anxiety faster than action.\"\"",
+            "author": "— Walter Anderson"
+          }
+        ]
+      }
+    },
+    "desktopRedirect": "desktop_emotion.html?type=anxious"
+  },
+  "angry": {
+    "title": "Angry",
+    "primaryColor": "#e74c3c",
+    "secondaryColor": "#FFB6C1",
+    "sections": {
+      "music": {
+        "title": "Calming Music",
+        "items": [
+          {
+            "title": "The Merry-Go-Round of Life",
+            "artist": "Joe Hisaishi",
+            "icon": "fa-music",
+            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400002JaXsS3ogTS8.m4a?guid=618193012&vkey=8516964782D40B9BACD746C41195478DD2814A4D92CEABF173221C900CEBEF3570D4E89EFDE9467DCC1D07AABE959D3E9CC98B179AE5E205__v21e2a16dc&uin=&fromtag=120032",
+            "coverSrc": "./audio/angry/1.png",
+            "duration": "6:15"
+          },
+          {
+            "title": "If We Have Each Other",
+            "artist": "Alec Benjamin",
+            "icon": "fa-music",
+            "audioSrc": "https://audio04.dmhmusic.com/71_53_T10064975320_128_4_1_0_sdk-cpm/cn/0105/M00/BA/D6/ChAKCGc-_PiAWBuJADkCdRCCeGE565.mp3?xcode=0bbb4f758a796a29fa7a213a5ef205d955f67c0",
+            "coverSrc": "./audio/angry/2.png",
+            "duration": "3:30"
+          },
+          {
+            "title": "Not Angry",
+            "artist": "Chris James",
+            "icon": "fa-music",
+            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400003Hk0gr3OZolx.m4a?guid=726188880&vkey=6307BBDE97CE9AAF17B33B79C60BE5C43E936D9680907044AFF83C8AA28D3FC0575344D7995CFF6E33BE66348EFBAAAC9D7338E4F538FD3A__v2b9ab34b&uin=&fromtag=120032",
+            "coverSrc": "./audio/angry/3.png",
+            "duration": "5:45"
+          }
+        ],
+        "moreLink": "music_player.html?type=angry&index=0"
+      },
+      "images": {
+        "title": "Peaceful Images",
+        "items": [
+          "./images/angry/1.jpg",
+          "./images/angry/2.jpg"
+        ],
+        "moreLink": "angry_images.html",
+        "galleryImages": [
+          {
+            "src": "./images/angry/1.jpg",
+            "alt": "Peaceful scene 1"
+          },
+          {
+            "src": "./images/angry/2.jpg",
+            "alt": "Peaceful scene 2"
+          },
+          {
+            "src": "./images/angry/3.png",
+            "alt": "Peaceful scene 3"
+          },
+          {
+            "src": "./images/angry/4.jpg",
+            "alt": "Peaceful scene 4"
+          },
+          {
+            "src": "./images/angry/5.jpg",
+            "alt": "Peaceful scene 5"
+          },
+          {
+            "src": "./images/angry/6.png",
+            "alt": "Peaceful scene 6"
+          },
+          {
+            "src": "./images/angry/7.jpg",
+            "alt": "Peaceful scene 7"
+          },
+          {
+            "src": "./images/angry/8.jpg",
+            "alt": "Peaceful scene 8"   
+          },
+          {
+            "src": "./images/angry/9.jpg",
+            "alt": "Peaceful scene 9"
+          },
+          {
+            "src": "./images/angry/10.jpg",
+            "alt": "Peaceful scene 10"
+          }
+        ]
+      },
+      "quotes": {
+        "title": "Calming Thoughts",
+        "items": [
+          {
+            "text": "\"For every minute you remain angry, you give up sixty seconds of peace of mind.\"",
+            "author": "- Ralph Waldo Emerson"
+          },
+          {
+            "text": "\"Anger is never without a reason, but seldom a good one.\"",
+            "author": "- Benjamin Franklin"
+          },
+          {
+            "text": "\"You will not be punished for your anger; you will be punished by your anger.\"",
+            "author": " - Buddha"
+          }
+        ],
+        "moreLink": "angry_quotes.html",
+        "allQuotes": [
+          {
+            "text": "\"For every minute you remain angry, you give up sixty seconds of peace of mind.\"",
+            "author": "- Ralph Waldo Emerson"
+          },
+          {
+            "text": "\"Anger is never without a reason, but seldom a good one.\"",
+            "author": "- Benjamin Franklin"
+          },
+          {
+            "text": "\"You will not be punished for your anger; you will be punished by your anger.\"",
+            "author": " - Buddha"
+          },
+          {
+            "text": "\"No man can think clearly when his fists are clenched.\"",
+            "author": "— George Jean Nathan"
+          },
+          {
+            "text": "\"If you kick a stone in anger, you'll hurt your own foot.\"",
+            "author": "— Korean Proverb"
+          },
+          {
+            "text": "\"Anger blows out the lamp of the mind. \"",
+            "author": "— Robert G. Ingersoll"
+          }
+        ]
+      }
+    },
+    "desktopRedirect": "desktop_emotion.html?type=angry"
+  },
+  "fear": {
+    "title": "Fear",
+    "primaryColor": "#D1F691",
+    "secondaryColor": "#ADDE76",
+    "sections": {
+      "music": {
+        "title": "Brave Music",
+        "items": [
+          {
+            "title": "Float On",
+            "artist": "Modest Mouse",
+            "icon": "fa-music",
+            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400001XQJnb3dE8ar.m4a?guid=847491859&vkey=2DA055CA06110E6F85ACC988029505E0199B911A709B6CAED7B52380DE908D0D8D279605DC62E04FC9D1B9C97E68B6022F2527058C9CD5EF__v21e2a1871&uin=&fromtag=120032&src=C400002aqxe41nRU5R.m4a",
+            "coverSrc": "./audio/fear/1.png",
+            "duration": "3:41"
+          },
+          {
+            "title": "I am still standing",
+            "artist": "Elton John",
+            "icon": "fa-music",
+            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400004HxFwa3g2cTw.m4a?guid=191973019&vkey=D61B062596608CEAFD49A482B6B988BE2BBC01915D5A5D4B05C26D0AE877B553D0CC202EE54BFBA0A12C1FFCA026DC5211F5429FC8716F1E__v2b9abb64&uin=&fromtag=120032",
+            "coverSrc": "./audio/fear/2.png",
+            "duration": "3:42"
+          },
+          {
+            "title": "Fear is a Liar",
+            "artist": "Zach Williams",
+            "icon": "fa-music",
+            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400003KHsc31buywL.m4a?guid=901920096&vkey=1E2817C84E84580DC4C8799B96D990F9B8D2DE80CEA9667B438B9074B1162F471922181CE446AD47427ABAAEBF2977D5295604687324BF4D__v2b9abb63&uin=&fromtag=120032",
+            "coverSrc": "./audio/fear/3.png",
+            "duration": "3:24"
+          }
+        ],
+        "moreLink": "music_player.html?type=fear&index=0"
+      },
+      "images": {
+        "title": "Courage Images",
+        "items": [
+          "./images/fear/1.jpg",
+          "./images/fear/2.jpg"
+        ],
+        "moreLink": "fear_images.html",
+        "galleryImages": [
+          {
+            "src": "./images/fear/1.jpg",
+            "alt": "Courage scene 1"
+          },
+          {
+            "src": "./images/fear/2.jpg",
+            "alt": "Courage scene 2"
+          },
+          {
+            "src": "./images/fear/3.jpg",
+            "alt": "Courage scene 3"
+          },
+          {
+            "src": "./images/fear/4.jpg",
+            "alt": "Courage scene 4"
+          },
+          {
+            "src": "./images/fear/5.jpg",
+            "alt": "Courage scene 5"
+          },
+          {
+            "src": "./images/fear/6.jpg",
+            "alt": "Courage scene 6"
+          },
+          {
+            "src": "./images/fear/7.jpg",
+            "alt": "Courage scene 7"
+          },
+          {
+            "src": "./images/fear/8.jpg",
+            "alt": "Courage scene 8"
+          },
+          {
+            "src": "./images/fear/9.jpg",
+            "alt": "Courage scene 9"
+          },
+          {
+            "src": "./images/fear/10.jpg",
+            "alt": "Courage scene 10"
+          } 
+        ]
+      },
+      "quotes": {
+        "title": "Courage Quotes",
+        "items": [
+          {
+            "text": "\"\"Courage is resistance to fear, mastery of fear, not absence of fear.\"\"",
+            "author": "— Mark Twain"
+          },
+          {
+            "text": "\"\"We fear that we are inadequate, but our deepest fear is that we are powerful beyond measure.\"\"",
+            "author": "— Marianne Williamson"
+          },
+          {
+            "text": "\"\"A ship in harbor is safe, but that's not what ships are built for.\"\"",
+            "author": "- G.T. Shedd"
+          }
+        ],
+        "moreLink": "fear_quotes.html",
+        "allQuotes": [
+          {
+            "text": "\"\"Courage is resistance to fear, mastery of fear, not absence of fear.\"\"",
+            "author": "— Mark Twain"
+          },
+          {
+            "text": "\"\"We fear that we are inadequate, but our deepest fear is that we are powerful beyond measure.\"\"",
+            "author": "— Marianne Williamson"
+          },
+          {
+            "text": "\"\"A ship in harbor is safe, but that's not what ships are built for.\"\"",
+            "author": "- G.T. Shedd"
+          },
+          {
+            "text": "\"\"Life is a daring adventure or nothing\" .\"",
+            "author": "— Helen Kellern"
+          },
+          {
+            "text": "\"\"Courage does not always roar, sometimes it's the quiet voice at the end of the day saying, I will try again tomorrow.\"\"",
+            "author": "— Mary Anne Radmacher"
+          },
+          {
+            "text": "\"\"Choose the great adventure of being brave and afraid at the exact same time\"\"",
+            "author": "— rené Brown"
+          }
+        ]
+      }
+    },
+    "desktopRedirect": "desktop_emotion.html?type=fear"
+  }
+} 
