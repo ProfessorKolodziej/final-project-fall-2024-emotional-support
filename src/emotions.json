@@ -11,7 +11,7 @@
             "title": "Beautiful things",
             "artist": "Benson Boone",
             "icon": "fa-music",
-            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400003XxBCq2nBHJ2.m4a?guid=367829399&vkey=96E7F5325F8175BF21FBEFECAD55F04BD46A67CEE53F1194F64F358BC67E1BC8780107EB9ED900874BEE02718760951A7AF86B9235FDE4D6__v21e2a1872&uin=&fromtag=120032&src=C400001ARmGA3GV3Yg.m4a",
+            "audioSrc": "./audio/happy/Beautiful things.m4a",
             "coverSrc": "./audio/happy/2.png",
             "duration": "3:45"
           },
@@ -19,7 +19,7 @@
             "title": "Happy",
             "artist": "Pharrell Williams",
             "icon": "fa-music",
-            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400000wlgZH0OP6oF.m4a?guid=341522699&vkey=7837F997BEACBD815A667EF166E2496AF130589EE45E361D4767CA81FF347F27676C1041558394B59393568B9F2C2CBF3DE325B28A56F9D3__v21e2a1734&uin=&fromtag=120032",
+            "audioSrc": "./audio/happy/Happy.m4a",
             "coverSrc": "./audio/happy/1.png",
             "duration": "3:53"
           },
@@ -27,7 +27,7 @@
             "title": "Marry you",
             "artist": "Benson Boone",
             "icon": "fa-music",
-            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400004VMZVJ3fYywS.m4a?guid=366513136&vkey=ACF00DC67521FE1B63643C5AB21C9B0F2B40B19DD908C7E771572EA88E259A70F4F796A2AD234F61EA029FDBBD36B2DC4C9DD8786AE3CBE8__v2b9abb63&uin=&fromtag=120032",
+            "audioSrc": "./audio/happy/Marry you.m4a",
             "coverSrc": "./audio/happy/3.png",
             "duration": "3:58"
           }
@@ -143,7 +143,7 @@
             "title": "I Want You to Know",
             "artist": "Zedd",
             "icon": "fa-music",
-            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400003xdrWF31ZICo.m4a?guid=724686015&vkey=B866D5727EDE386A2030599E7AA3DF0F2061E4E42830F94C9A302CB32755C8CD91729B073F88BA1D7E5DCE0D96F5CB2B4B98D3E185B8EA88__v21e2a1872&uin=&fromtag=120032",
+            "audioSrc": "./audio/sad/I Want You to Know.m4a",
             "coverSrc": "./audio/sad/1.png",
             "duration": "3:02"
           },
@@ -151,7 +151,7 @@
             "title": "How Far I'll Go",
             "artist": "Auliʻi Cravalho",
             "icon": "fa-music",
-            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400003MhqSp0n2jSs.m4a?guid=180505511&vkey=63925732A3483EE86BD6C959CBEA04CDBB2EE8FBACF3CFAF778CE904BC59FC3553D09DEC8092301D258BEB9B67BB1AF618880928B7C6A422__v21e2a1871&uin=&fromtag=120032",
+            "audioSrc": "./audio/sad/How Far I'll Go.m4a",
             "coverSrc": "./audio/sad/2.png",
             "duration": "4:55"
           },
@@ -159,7 +159,7 @@
             "title": "I'm Yours",
             "artist": "Jason Mraz",
             "icon": "fa-music",
-            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400002yOSU7420kDa.m4a?guid=574432069&vkey=732EF05ABBD7F4C630A794914940BE666C5933921BB24D1C893D670F7E1246D42CD1629116588BD5A2E75E347B332E9B5B86A77B31E8B303__v2b9ab34c&uin=&fromtag=120032",
+            "audioSrc": "./audio/sad/I'm Yours.m4a",
             "coverSrc": "./audio/sad/3.png",
             "duration": "4:51"
           }

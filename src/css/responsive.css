@@ -1,0 +1,192 @@
+/* 响应式设计CSS文件 */
+/* 定义各设备断点：手机(375px)、平板(768px)和桌面(1024px) */
+
+/* 基础样式 - 适用于所有设备 */
+:root {
+    --phone-width: 375px;
+    --tablet-width: 768px;
+    --desktop-width: 1024px;
+}
+
+/* 手机样式 (默认样式, <= 767px) */
+body {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.container {
+    padding: 10px 15px;
+    width: 100%;
+}
+
+/* 平板样式 (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
+        font-size: 15px;
+    }
+    
+    .container {
+        padding: 15px 25px;
+        max-width: 100%;
+    }
+    
+    /* 平板特有的布局调整 */
+    .content-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* 导航栏调整 */
+    .navbar {
+        height: 70px;
+    }
+    
+    /* 标题字体大小 */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* 图片和内容卡片调整 */
+    .card {
+        padding: 20px;
+        border-radius: 12px;
+    }
+    
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+/* 桌面样式 (>= 1024px) */
+@media (min-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .container {
+        padding: 20px 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* 桌面特有的布局调整 */
+    .content-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    
+    /* 两列布局 */
+    .two-column-layout {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 40px;
+    }
+    
+    /* 导航栏调整 */
+    .navbar {
+        height: 80px;
+    }
+    
+    /* 顶部导航 */
+    .top-navigation {
+        display: flex;
+        gap: 30px;
+    }
+    
+    /* 桌面特有的交互样式 */
+    .hover-effect:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    /* 标题字体大小 */
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* 图片和内容卡片调整 */
+    .card {
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .image-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    
+    /* 浮动按钮 */
+    .floating-button {
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .floating-button:hover {
+        transform: scale(1.1);
+    }
+    
+    /* 模态窗口样式 */
+    .modal {
+        background-color: white;
+        width: 600px;
+        max-width: 80%;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* 阴影效果 */
+    .shadow-effect {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.3s ease;
+    }
+    
+    .shadow-effect:hover {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* 动画效果 */
+    .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    .slide-up {
+        animation: slideUp 0.5s ease-in-out;
+    }
+    
+    @keyframes slideUp {
+        from { transform: translateY(30px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+}

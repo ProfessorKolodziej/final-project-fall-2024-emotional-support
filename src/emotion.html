@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>情绪支持应用</title>
     <link rel="stylesheet" href="css/emotion.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
         </div>
     </div>
     
-    <!-- 音乐部分 -->
+    
     <div class="section" id="music-section">
         <div class="section-header">
             <div id="music-title" class="section-title">音乐</div>
@@ -30,7 +31,7 @@
         <div id="music-container"></div>
     </div>
     
-    <!-- 图片部分 -->
+    
     <div class="section" id="images-section">
         <div class="section-header">
             <div id="images-title" class="section-title">图片</div>
@@ -40,7 +41,7 @@
         <div id="images-container" class="images-container"></div>
     </div>
     
-    <!-- 名言部分 -->
+    
     <div class="section" id="quotes-section">
         <div class="section-header">
             <div id="quotes-title" class="section-title">名言</div>
@@ -51,20 +52,20 @@
     </div>
 
     <script>
-        // 从URL获取情绪类型
+        
         function getEmotionType() {
             const urlParams = new URLSearchParams(window.location.search);
             const emotionType = urlParams.get('type');
             return emotionType || 'happy'; // 默认为happy
         }
 
-        // 设置CSS变量
+        
         function setThemeColors(primaryColor, secondaryColor) {
             document.documentElement.style.setProperty('--primary-color', primaryColor);
             document.documentElement.style.setProperty('--secondary-color', secondaryColor);
         }
 
-        // 渲染音乐部分
+        
         function renderMusicSection(musicData) {
             const container = document.getElementById('music-container');
             container.innerHTML = '';
@@ -94,7 +95,7 @@
             });
         }
 
-        // 渲染图片部分
+        
         function renderImagesSection(imagesData) {
             const container = document.getElementById('images-container');
             container.innerHTML = '';
@@ -112,7 +113,7 @@
             });
         }
 
-        // 渲染名言部分
+        
         function renderQuotesSection(quotesData) {
             const container = document.getElementById('quotes-container');
             container.innerHTML = '';
@@ -136,22 +137,8 @@
             });
         }
 
-        // 处理重定向
-        function handleRedirect(desktopRedirect) {
-            // 添加自动重定向代码，根据屏幕宽度判断是否应该跳转到PC版
-            if (window.innerWidth >= 1024) {
-                window.location.href = desktopRedirect;
-            }
-            
-            // 当窗口大小改变时也进行检查
-            window.onresize = function() {
-                if (window.innerWidth >= 1024) {
-                    window.location.href = desktopRedirect;
-                }
-            };
-        }
 
-        // 初始化页面
+        
         function initPage() {
             const emotionType = getEmotionType();
             
@@ -164,19 +151,19 @@
                         return;
                     }
                     
-                    // 设置页面标题
+                    
                     document.title = emotionData.title + ' - 情绪支持应用';
                     document.getElementById('page-title').textContent = emotionData.title;
                     
-                    // 设置主题颜色
+                    
                     setThemeColors(emotionData.primaryColor, emotionData.secondaryColor);
                     
-                    // 渲染各部分内容
+                    
                     renderMusicSection(emotionData.sections.music);
                     renderImagesSection(emotionData.sections.images);
                     renderQuotesSection(emotionData.sections.quotes);
                     
-                    // 处理PC版重定向
+                    
                     handleRedirect(emotionData.desktopRedirect);
                 })
                 .catch(error => {
@@ -184,10 +171,10 @@
                 });
         }
         
-        // 初始化页面
+        
         window.onload = initPage;
         
-        // 为保存按钮添加点击事件（动态绑定）
+        
         document.addEventListener('click', function(event) {
             if (event.target.closest('.save-button')) {
                 const saveButton = event.target.closest('.save-button');
