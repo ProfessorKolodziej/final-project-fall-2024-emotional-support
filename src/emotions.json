@@ -267,7 +267,7 @@
             "title": "You'd Never Know",
             "artist": "BLÜ EYES",
             "icon": "fa-music",
-            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400002M0ZM81bjQMm.m4a?guid=565056161&vkey=F7631FCD803D5F6470BBAB5666703779D9B66E34D704745B4383F182C65FEE77DCB22217C0A0F041AF65C2B984186E746AF30F5B599E90CD__v2b9ab755&uin=&fromtag=120032&src=C400002UTd3815bBlY.m4a",
+            "audioSrc": "./audio/anxious/You Never Know.m4a",
             "coverSrc": "./audio/anxious/1.png",
             "duration": "4:10"
           },
@@ -275,7 +275,7 @@
             "title": "Anxious Heart",
             "artist": "Jeremy Camp",
             "icon": "fa-music",
-            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400000JYdFz2Ki2nD.m4a?guid=576235457&vkey=BE9A8394CFEF502D9BB2CD104E3013351B7BB3317259704F41F0427572F55BE4759D29B7A8D654FECA0FFDBF750800565E851DFC06C06818__v2b9ab33c&uin=&fromtag=120032",
+            "audioSrc": "./audio/anxious/Anxious Heart.m4a",
             "coverSrc": "./audio/anxious/2.png",
             "duration": "8:09"
           },
@@ -283,7 +283,7 @@
             "title": "Better Off",
             "artist": "Lindsey Ray",
             "icon": "fa-music",
-            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400001AbanQ40JWQU.m4a?guid=167702415&vkey=E0AE245E0C2075FDD3F57F0342F850A8104B1E8BED9D81A1C18F13CEA74BD70E0B663FB99F63BF99D0276FEF103CDEDCE1A1CFEF7FA3B874__v21e2a1874&uin=&fromtag=120032&src=C400000xMqyN2HdW9d.m4a",
+            "audioSrc": "./audio/anxious/Better Off.m4a",
             "coverSrc": "./audio/anxious/3.png",
             "duration": "5:30"
           }
@@ -399,7 +399,7 @@
             "title": "The Merry-Go-Round of Life",
             "artist": "Joe Hisaishi",
             "icon": "fa-music",
-            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400002JaXsS3ogTS8.m4a?guid=618193012&vkey=8516964782D40B9BACD746C41195478DD2814A4D92CEABF173221C900CEBEF3570D4E89EFDE9467DCC1D07AABE959D3E9CC98B179AE5E205__v21e2a16dc&uin=&fromtag=120032",
+            "audioSrc": "./audio/angry/The Merry-Go-Round of Life.m4a",
             "coverSrc": "./audio/angry/1.png",
             "duration": "6:15"
           },
@@ -407,7 +407,7 @@
             "title": "If We Have Each Other",
             "artist": "Alec Benjamin",
             "icon": "fa-music",
-            "audioSrc": "https://audio04.dmhmusic.com/71_53_T10064975320_128_4_1_0_sdk-cpm/cn/0105/M00/BA/D6/ChAKCGc-_PiAWBuJADkCdRCCeGE565.mp3?xcode=0bbb4f758a796a29fa7a213a5ef205d955f67c0",
+            "audioSrc": "./audio/angry/If We Have Each Other.m4a",
             "coverSrc": "./audio/angry/2.png",
             "duration": "3:30"
           },
@@ -415,7 +415,7 @@
             "title": "Not Angry",
             "artist": "Chris James",
             "icon": "fa-music",
-            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400003Hk0gr3OZolx.m4a?guid=726188880&vkey=6307BBDE97CE9AAF17B33B79C60BE5C43E936D9680907044AFF83C8AA28D3FC0575344D7995CFF6E33BE66348EFBAAAC9D7338E4F538FD3A__v2b9ab34b&uin=&fromtag=120032",
+            "audioSrc": "./audio/angry/Not Angry.m4a",
             "coverSrc": "./audio/angry/3.png",
             "duration": "5:45"
           }
@@ -531,7 +531,7 @@
             "title": "Float On",
             "artist": "Modest Mouse",
             "icon": "fa-music",
-            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400001XQJnb3dE8ar.m4a?guid=847491859&vkey=2DA055CA06110E6F85ACC988029505E0199B911A709B6CAED7B52380DE908D0D8D279605DC62E04FC9D1B9C97E68B6022F2527058C9CD5EF__v21e2a1871&uin=&fromtag=120032&src=C400002aqxe41nRU5R.m4a",
+            "audioSrc": "./audio/fear/Float On.m4a",
             "coverSrc": "./audio/fear/1.png",
             "duration": "3:41"
           },
@@ -539,7 +539,7 @@
             "title": "I am still standing",
             "artist": "Elton John",
             "icon": "fa-music",
-            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400004HxFwa3g2cTw.m4a?guid=191973019&vkey=D61B062596608CEAFD49A482B6B988BE2BBC01915D5A5D4B05C26D0AE877B553D0CC202EE54BFBA0A12C1FFCA026DC5211F5429FC8716F1E__v2b9abb64&uin=&fromtag=120032",
+            "audioSrc": "./audio/fear/I am still standing.m4a",
             "coverSrc": "./audio/fear/2.png",
             "duration": "3:42"
           },
@@ -547,7 +547,7 @@
             "title": "Fear is a Liar",
             "artist": "Zach Williams",
             "icon": "fa-music",
-            "audioSrc": "http://ws.stream.qqmusic.qq.com/C400003KHsc31buywL.m4a?guid=901920096&vkey=1E2817C84E84580DC4C8799B96D990F9B8D2DE80CEA9667B438B9074B1162F471922181CE446AD47427ABAAEBF2977D5295604687324BF4D__v2b9abb63&uin=&fromtag=120032",
+            "audioSrc": "./audio/fear/Fear is a Liar.m4a",
             "coverSrc": "./audio/fear/3.png",
             "duration": "3:24"
           }

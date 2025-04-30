@@ -1,0 +1,10 @@
+.header-flex {
+    display: flex;
+    align-items: center;
+}
+
+.back-button {
+    color: inherit;
+    text-decoration: none;
+    margin-right: 10px;
+} 

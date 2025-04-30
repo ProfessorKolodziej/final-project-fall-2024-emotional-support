@@ -19,7 +19,7 @@
         </div>
     </div>
     
-   
+    <!-- 保存的图片部分 -->
     <div class="section">
         <div class="section-header">
             <i class="fas fa-heart section-icon"></i>
@@ -27,11 +27,11 @@
         </div>
         
         <div class="image-grid" id="saved-images">
-            
+            <!-- 图片通过JS动态加载 -->
         </div>
     </div>
     
-    
+    <!-- 保存的名言部分 -->
     <div class="section">
         <div class="section-header">
             <i class="fas fa-heart section-icon"></i>
@@ -39,11 +39,11 @@
         </div>
         
         <div id="saved-quotes">
-            
+            <!-- 名言通过JS动态加载 -->
         </div>
     </div>
     
-    
+    <!-- 保存的歌曲部分 -->
     <div class="section">
         <div class="section-header">
             <i class="fas fa-heart section-icon"></i>
@@ -51,19 +51,19 @@
         </div>
         
         <div id="saved-songs">
-            
+            <!-- 歌曲通过JS动态加载 -->
         </div>
     </div>
 
     <script>
-        
+        // 从本地存储获取保存的内容
         function getSavedItems() {
-            
+            // 从localStorage获取数据
             const savedImages = JSON.parse(localStorage.getItem('savedImages') || '[]');
             const savedQuotes = JSON.parse(localStorage.getItem('savedQuotes') || '[]');
             const savedSongs = JSON.parse(localStorage.getItem('savedSongs') || '[]');
             
-            
+            // 如果缓存中没有数据，使用默认数据
             const savedData = {
                 images: savedImages.length > 0 ? savedImages : [
                     { src: "./images/happy/1.jpg", alt: "Happy moment 1" },
@@ -103,7 +103,7 @@
             return savedData;
         }
         
-        
+        // 渲染保存的图片
         function renderSavedImages(images) {
             const container = document.getElementById('saved-images');
             container.innerHTML = '';
@@ -120,7 +120,7 @@
             });
         }
         
-        
+        // 渲染保存的名言
         function renderSavedQuotes(quotes) {
             const container = document.getElementById('saved-quotes');
             container.innerHTML = '';
@@ -142,19 +142,19 @@
                 container.appendChild(quoteItem);
             });
             
-            
+            // 为保存按钮添加点击事件
             document.querySelectorAll('.save-button').forEach((btn, index) => {
                 btn.addEventListener('click', function() {
-                    
+                    // 从localStorage中删除该项目
                     const quoteItem = this.closest('.quote-item');
                     quoteItem.style.opacity = '0';
                     
                     setTimeout(() => {
-                        
+                        // 获取当前保存的名言
                         const savedQuotes = JSON.parse(localStorage.getItem('savedQuotes') || '[]');
-                        
+                        // 删除指定索引的名言
                         savedQuotes.splice(index, 1);
-                        
+                        // 更新localStorage
                         localStorage.setItem('savedQuotes', JSON.stringify(savedQuotes));
                         
                         quoteItem.remove();
@@ -163,7 +163,7 @@
             });
         }
         
-        
+        // 渲染保存的歌曲
         function renderSavedSongs(songs) {
             const container = document.getElementById('saved-songs');
             container.innerHTML = '';
@@ -195,10 +195,10 @@
                 container.appendChild(songItem);
             });
             
-            
+            // 为播放按钮添加点击事件
             document.querySelectorAll('.play-button').forEach(btn => {
                 btn.addEventListener('click', function() {
-                   
+                    // 这里实际应用中会播放歌曲
                     const playIcon = this.querySelector('i');
                     
                     if (playIcon.classList.contains('fa-play')) {
@@ -211,18 +211,18 @@
                 });
             });
             
-            
+            // 为删除按钮添加点击事件
             document.querySelectorAll('.remove-song-button').forEach((btn, index) => {
                 btn.addEventListener('click', function() {
                     const songItem = this.closest('.song-item');
                     songItem.style.opacity = '0';
                     
                     setTimeout(() => {
-                        
+                        // 获取当前保存的歌曲
                         const savedSongs = JSON.parse(localStorage.getItem('savedSongs') || '[]');
-                        
+                        // 删除指定索引的歌曲
                         savedSongs.splice(index, 1);
-                        
+                        // 更新localStorage
                         localStorage.setItem('savedSongs', JSON.stringify(savedSongs));
                         
                         songItem.remove();
@@ -231,7 +231,7 @@
             });
         }
         
-       
+        // 页面加载时初始化
         window.onload = function() {
             const savedItems = getSavedItems();
             

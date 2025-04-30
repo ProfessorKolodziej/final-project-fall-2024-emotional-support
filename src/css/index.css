@@ -192,4 +192,14 @@ body {
 
 .home-icon {
     color: #ffb3b3;
+}
+
+.mood-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
 } 
